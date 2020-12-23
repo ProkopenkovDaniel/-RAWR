@@ -1,13 +1,656 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="jquery-3.5.1.min.js"></script> 
-    <link rel="stylesheet" href="main.css">
-    <title>Document</title>
+  <title>RAWR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="CSS/main.css" type="text/css" rel="stylesheet">
+  <link href="CSS/buttons.css" type="text/css" rel="stylesheet">
+  <link href="CSS/menu.css" type="text/css" rel="stylesheet">
+  <link href="CSS/footer.css" type="text/css" rel="stylesheet">
+  <link href="CSS/media.css" type="text/css" rel="slylesheet">
+  <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="JS/jquery-3.5.1.min.js"></script>
+  <script src="JS/jquery-3.5.1.js"></script> 
+  <script src="JS/main.js"></script>
+  <script type="text/javascript" src="slick/slick.js"></script>
+  <script src="JS/dots.js"></script>
+  <script src="JS/header.js"></script>
 </head>
 <body>
-    <script src="main.js"></script>
+  <header>
+    <div class="headerWrapper">
+      <div class="leftMenu">
+        <ul>
+          <li><a href="#">новинки</a></li>
+          <li class="liMenuItem"><a href="#" class="menuItem" id="womenItem">женщины <div class="img"></div></a></li>
+          <li class="liMenuItem"><a href="#" class="menuItem" id="menItem">мужчины <div class="img"></div></a></li>
+          <li><a href="#" class="red">discount</a></li>
+        </ul>
+      </div>
+      <div class="logo">
+        <img src="IMG/Logo/White.png" alt="logo">
+      </div>
+      <div class="rightMenu">
+        <ul>
+          <li>
+            <a href="#" id="search" class="menuItemLink"></a>
+            <div id="searchLine"></div>
+          </li>
+          <li>
+            <a href="#" id="saved" class="menuItemLink"></a>
+          </li>
+          <li>
+            <a href="#" id="account" class="menuItemLink"></a>
+          </li>
+          <li>
+            <a href="#" id="basket" class="menuItemLink"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="addedMenu hide" id="men">
+        <div class="tips">
+          <ul>
+            <li><div class="tlineThin lineItem"></div><a href="#">Новинки</a></li>
+            <div class="lineThin"></div>
+            <li><div class="lineItem"></div><a href="#">Брюки</a></li>
+            <li><div class="lineItem"></div><a href="#">Джемперы и Кардиганы</a></li>
+            <li><div class="lineItem"></div><a href="#">Костюмы</a></li>
+            <li><div class="lineItem"></div><a href="#">Куртки</a></li>
+            <li><div class="lineItem"></div><a href="#">Футболки</a></li>
+            <li><div class="lineItem"></div><a href="#">Худи</a></li>
+            <li><div class="lineItem"></div><a href="#">Шорты</a></li>
+            <div class="lineThin"></div>
+            <li><div class="tlineThin lineItem"></div><a href="#" class="red">DISCOUNT</a></li>
+          </ul>
+        </div>
+        <div class="menuPhotos">
+          <div class="photoTip">
+            <a href="#">  
+              <img src="IMG/Image/man/PT3.png" alt=""><br/>
+              <span>
+                Костюмы
+              </span>
+            </a>
+          </div>
+          <div class="photoTip">
+            <a href="#"> 
+              <img src="IMG/Image/man/PT2.png" alt=""><br/>
+              <span>
+                Худи
+              </span>
+            </a>
+          </div>
+          <div class="photoTip">
+            <a href="#"> 
+              <img src="IMG/Image/man/PT1.png" alt=""><br/>
+              <span>
+                Футболки
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="addedMenu hide" id="women">
+        <div class="tips">
+          <ul>
+            <li><div class="tlineThin lineItem"></div><a href="#">Новинки</a></li>
+            <div class="lineThin"></div>
+            <div class="row">
+              <div style="width: 59.75%;">
+                <li><div class="lineItem"></div><a href="#">Боди</a></li>
+                <li><div class="lineItem"></div><a href="#">Брюки И Леггинсы</a></li>
+                <li><div class="lineItem"></div><a href="#">Джемперы И Кардиганы</a></li>
+                <li><div class="lineItem"></div><a href="#">Джинсы</a></li>
+                <li><div class="lineItem"></div><a href="#">Комбинезоны</a></li>
+                <li><div class="lineItem"></div><a href="#">Костюмы</a></li>
+                <li><div class="lineItem"></div><a href="#">Куртки И Пальто</a></li>
+              </div>
+              <div style="width: 39%;">
+                <li><div class="lineItem"></div><a href="#">Платья</a></li>
+                <li><div class="lineItem"></div><a href="#">Рубашки</a></li>
+                <li><div class="lineItem"></div><a href="#">Футболки И Топы</a></li>
+                <li><div class="lineItem"></div><a href="#">Худи</a></li>
+                <li><div class="lineItem"></div><a href="#">Шорты</a></li>
+              </div>
+            </div>
+            <div class="lineThin"></div>
+            <li><div class="tlineThin lineItem"></div><a href="#" class="red">DISCOUNT</a></li>
+          </ul>
+        </div>
+        <div class="menuPhotos">
+          <div class="photoTip">
+            <a href="#">  
+              <img src="IMG/Image/woman/PT3.png" alt=""><br/>
+              <span>
+                Костюмы
+              </span>
+            </a>
+          </div>
+          <div class="photoTip">
+            <a href="#"> 
+              <img src="IMG/Image/woman/PT2.png" alt=""><br/>
+              <span>
+                Худи
+              </span>
+            </a>
+          </div>
+          <div class="photoTip">
+            <a href="#"> 
+              <img src="IMG/Image/woman/PT1.png" alt=""><br/>
+              <span>
+                Куртки
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+  </header>
+  <div id="Page">
+    <div class="hard">
+    <div class="slider w" id="full-slide">
+      <div class="item section1">
+        <div class="line">
+          <div>
+            <span>Бесплатная доставка по Беларуси</span>
+            <span>Бесплатная доставка по Беларуси</span>
+            <span>Бесплатная доставка по Беларуси</span>
+            <span class="right">Бесплатная доставка по Беларуси</span>
+          </div>
+        </div>
+        <div class="sectionImg">
+            <div class="arrow rightArrow">
+              <div class="reh m1"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+              <div class="reh m2"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+              <div class="reh m3"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+              <div class="arrowText">MEN</div>
+            </div>
+            <div class="btnWrapper">
+              <div class="linkButton" id="womanBtnWrapper">
+                <a id="Btn" class="btnl">WOMEN</a>
+              </div>
+            </div>
+            <div class="down">
+              <button class="downButton"></button>
+            </div>
+        </div>
+      </div>
+      <div class="item section2">
+        <div class="line">
+          <div>
+            <span>Бесплатная доставка по Беларуси</span>
+            <span>Бесплатная доставка по Беларуси</span>
+            <span>Бесплатная доставка по Беларуси</span>
+            <span class="right">Бесплатная доставка по Беларуси</span>
+          </div>
+        </div>
+        <div class="sectionImg">
+          <div class="btnWrapper">
+            <div class="linkButton" id="hudiBtnWrapper">
+              <a id="Btn">худи</a>
+            </div>
+            <div class="linkButton" id="suitBtnWrapper">
+              <a id="Btn">костюмы</a>
+            </div>
+          </div>
+          <div class="arrow rightArrow">
+            <div class="reh m1"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+            <div class="reh m2"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+            <div class="reh m3"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+            <div class="arrowText">MEN</div>
+          </div>
+          <div class="down">
+            <button class="downButton"></button>
+          </div>
+        </div>
+      </div>
+      <div class="item section3">
+        <div class="line">
+          <div>
+            <span>Бесплатная доставка по Беларуси</span>
+            <span>Бесплатная доставка по Беларуси</span>
+            <span>Бесплатная доставка по Беларуси</span>
+            <span class="right">Бесплатная доставка по Беларуси</span>
+          </div>
+        </div>
+        <div class="sectionImg">
+          <div class="arrow rightArrow">
+            <div class="reh m1"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+            <div class="reh m2"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+            <div class="reh m3"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+            <div class="arrowText">MEN</div>
+          </div>
+          <div class="btnWrapper">
+            <div class="linkButton" id="jacketBtnWrapper">
+              <a id="Btn">куртки</a>
+            </div>
+            <div class="linkButton" id="pantsBtnWrapper">
+              <a id="Btn">брюки</a>
+            </div>
+          </div>
+          <div class="down">
+            <button class="downButton"></button>
+          </div>
+        </div>
+      </div>
+      <div class="item section4">
+        <div class="line">
+          <div>
+            <span>Бесплатная доставка по Беларуси</span>
+            <span>Бесплатная доставка по Беларуси</span>
+            <span>Бесплатная доставка по Беларуси</span>
+            <span class="right">Бесплатная доставка по Беларуси</span>
+          </div>
+        </div>
+        <div class="sectionImg">
+          <div class="arrow rightArrow">
+            <div class="reh m1"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+            <div class="reh m2"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+            <div class="reh m3"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+            <div class="arrowText">MEN</div>
+          </div>
+          <div class="btnWrapper">
+            <div class="linkButton" id="shirtBtnWrapper">
+              <a id="Btn">футболки</a>
+            </div>
+          </div>
+          <div class="down">
+            <button class="downButton"></button>
+          </div>
+        </div>
+      </div>
+      <div class="item section5">
+        <div class="line">
+          <div>
+            <span>Бесплатная доставка по Беларуси</span>
+            <span>Бесплатная доставка по Беларуси</span>
+            <span>Бесплатная доставка по Беларуси</span>
+            <span class="right">Бесплатная доставка по Беларуси</span>
+          </div>
+        </div>
+        <div class="sectionImg">
+          <div class="arrow rightArrow">
+            <div class="reh m1"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+            <div class="reh m2"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+            <div class="reh m3"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+            <div class="arrowText">MEN</div>
+          </div>
+          <div class="text">
+            <h4>Смысл сайта</h4>
+            <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.</p>
+            <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
+          </div>
+        </div>
+      </div>
+      <div class="item section6"> 
+        <div class="line">
+          <div>
+            <span>Бесплатная доставка по Беларуси</span>
+            <span>Бесплатная доставка по Беларуси</span>
+            <span>Бесплатная доставка по Беларуси</span>
+            <span class="right">Бесплатная доставка по Беларуси</span>
+          </div>
+        </div>
+        <div class="head">
+          <div class="lineThin"></div>
+          <a href="#">
+            <div class="instagramInfo">
+              <span>Присоединяйтесь к нам</span>
+                <img src="IMG/Icons/black/uil_instagram(black).png"></br>
+            </div>
+          </a>
+          <div class="lineThin rightLine"></div>
+        </div>
+        <a href="#"><div class="instagramLink">@rawwwr_minsk</div></a>
+        <div class="photos">
+          <div class="row">
+            <a href="#" class="iLink"><img src="IMG/Image/woman/Group 2.jpg"alt="instagram"></a>
+            <a href="#" class="iLink"><img src="IMG/Image/woman/Group 3.jpg"alt="instagram"></a>
+            <a href="#" class="iLink"><img src="IMG/Image/woman/Group 4.jpg"alt="instagram"></a>
+            <a href="#" class="iLink"><img src="IMG/Image/woman/Group 1.jpg"alt="instagram"></a>
+            <a href="#" class="iLink"><img src="IMG/Image/woman/Group 6.jpg"alt="instagram"></a>
+            <a href="#" class="right iLink"><img src="IMG/Image/woman/Group 5.jpg"alt="instagram"></a>
+          </div>
+
+        </div>
+        <div class="form">
+          <div class="preText">БУДЬТЕ В КУРСЕ НАШИХ ПОСЛЕДНИХ НОВОСТЕЙ: ПОДПИШИТЕСЬ 
+            НА РАССЫЛКУ И ПОЛУЧАЙТЕ ИНФОРМАЦИЮ О ПОСЛЕДНИХ ПОСТУПЛЕНИЯХ И АКЦИЯХ
+          </div>
+          <form>
+            <div class="row">
+              <input type="text" placeholder="Введите  ваш email" class="formInput">
+              <button class="formButton">подписаться</button>
+            </div>
+            <div class="row last">
+              <input type="checkbox" class="checkBox">
+              <div class="postText">
+                Отправляя заявку, вы соглашаетесь с правилами <a href="#">Политики конфиденциальности</a>. 
+                Только новости и обновления. И никакого спама
+              </div>
+            </div>
+          </form>
+        </div>
+        <footer>
+          <div class="footerWrapper">
+            <div class="footerLeft">
+              <ul>
+                <li class="footerLi" >о нас</li>
+                <div class="lineThin"></div>
+                <li class="footerLi">ип авдеев а.а.</li>
+                <li class="footerLi">211391, Республика Беларусь, г.Орша, ул. <br/>
+                   Доминиканская, 33А
+                </li>
+                <li class="footerLi">
+                  +375 29 365 66 61
+                </li>
+                <li class="footerLi">
+                  Режим работы: <br/>
+                  Понедельник-пятница, <br/>
+                  с 8:00 до 17:00
+                </li>
+              </ul>
+            </div>
+            <div class="footerCenter">
+              <div class="footerTopCenter">
+                <div class="topCenterWrapper">
+                  <a href="#"><img src="IMG/Icons/iconfinder_vk.png" alt="VKLogo"></a>
+                  <a href="#"><img src="IMG/Icons/iconfinder_pintere.png" alt="PILogo"></a>
+                  <a href="#"><img src="IMG/Icons/iconfinder_instagram.png" alt="INLogo" class="right"></a>
+                </div>
+              </div>
+              <div class="footerBottomCenter">
+                <img src="IMG/Logo/Rawr_Logo_lettering.png" alt="Rawr_Logo_lettering">
+              </div>
+            </div>
+            <div class="footerRight">
+              <ul>
+                <li class="footerLi">покупателям</li>
+                <div class="lineThin"></div>
+                <li class="footerLi"><a href="#">ОФОРМЛЕНИЕ ЗАКАЗА</a></li>
+                <li class="footerLi"><a href="#">ДОСТАВКА</a></li>
+                <li class="footerLi"><a href="#">ОПЛАТА</a></li>
+                <li class="footerLi"><a href="#">ВОЗВРАТ</a></li>
+                <li class="footerLi"><a href="#">Политика конфиденциальности</a></li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <ul class="dots" id="Slider1">
+      <li class="dot active" id="0">
+        <button></button>
+      </li>
+      <li class="dot" id="1">
+        <button></button>
+      </li>
+      <li class="dot" id="2">
+        <button></button>
+      </li>
+      <li class="dot" id="3">
+        <button></button>
+      </li>
+      <li class="dot" id="4">
+        <button></button>
+      </li>
+      <li class="dot" id="5">
+        <button></button>
+      </li>
+    </ul>
+  </div>
+    <div class="hard">
+      <div class="slider" id="full-slide">
+        <div class="item section1" id = "section1">
+          <div class="line">
+            <div>
+              <span>Бесплатная доставка по Беларуси</span>
+              <span>Бесплатная доставка по Беларуси</span>
+              <span>Бесплатная доставка по Беларуси</span>
+              <span class="right">Бесплатная доставка по Беларуси</span>
+            </div>
+          </div>
+          <div class="sectionImg">
+            <div class="arrow leftArrow">
+              <div class="arrowText">WOMEN</div>
+              <div class="reh m3"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+              <div class="reh m2"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+              <div class="reh m1"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+            </div>
+            <div class="btnWrapper">
+              <div class="linkButton" id="manBtnWrapper">
+                <a id="Btn">man</a>
+              </div>
+            </div>
+            <div class="down">
+              <button class="downButton"></button>
+            </div>
+          </div>
+        </div>
+        <div class="item section2" id = "section2">
+          <div class="line">
+            <div>
+              <span>Бесплатная доставка по Беларуси</span>
+              <span>Бесплатная доставка по Беларуси</span>
+              <span>Бесплатная доставка по Беларуси</span>
+              <span class="right">Бесплатная доставка по Беларуси</span>
+            </div>
+        </div>
+          <div class="sectionImg">
+            <div class="arrow leftArrow">
+              <div class="arrowText">WOMEN</div>
+              <div class="reh m3"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+              <div class="reh m2"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+              <div class="reh m1"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+            </div>
+            <div class="btnWrapper">
+              <div class="linkButton" id="hudiBtnWrapper">
+                <a id="Btn">худи</a>
+              </div>
+              <div class="linkButton" id="suitBtnWrapper">
+                <a id="Btn">костюмы</a>
+              </div>
+            </div>
+            <div class="down">
+              <button class="downButton"></button>
+            </div>
+          </div>
+        </div>
+        <div class="item section3" id = "section3">
+          <div class="line">
+            <div>
+              <span>Бесплатная доставка по Беларуси</span>
+              <span>Бесплатная доставка по Беларуси</span>
+              <span>Бесплатная доставка по Беларуси</span>
+              <span class="right">Бесплатная доставка по Беларуси</span>
+            </div>
+          </div>
+          <div class="sectionImg">
+            <div class="arrow leftArrow">
+              <div class="arrowText">WOMEN</div>
+              <div class="reh m3"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+              <div class="reh m2"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+              <div class="reh m1"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+            </div>
+            <div class="btnWrapper">
+              <div class="linkButton" id="jacketBtnWrapper">
+                <a id="Btn">куртки</a>
+              </div>
+              <div class="linkButton" id="pantsBtnWrapper">
+                <a id="Btn">брюки</a>
+              </div>
+            </div>
+            <div class="down">
+              <button class="downButton"></button>
+            </div>
+          </div>
+        </div>
+        <div class="item section4" id = "section4">
+          <div class="line">
+            <div>
+              <span>Бесплатная доставка по Беларуси</span>
+              <span>Бесплатная доставка по Беларуси</span>
+              <span>Бесплатная доставка по Беларуси</span>
+              <span class="right">Бесплатная доставка по Беларуси</span>
+            </div>
+          </div>
+          <div class="sectionImg">
+            <div class="arrow leftArrow">
+              <div class="arrowText">WOMEN</div>
+              <div class="reh m3"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+              <div class="reh m2"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+              <div class="reh m1"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+            </div>
+            <div class="btnWrapper">
+              <div class="linkButton" id="shirtBtnWrapper">
+                <a id="Btn">футболки</a>
+              </div>
+            </div>
+            <div class="down">
+              <button class="downButton"></button>
+            </div>
+          </div>
+        </div>
+        <div class="item section5" id = "section5">
+          <div class="line">
+            <div>
+              <span>Бесплатная доставка по Беларуси</span>
+              <span>Бесплатная доставка по Беларуси</span>
+              <span>Бесплатная доставка по Беларуси</span>
+              <span class="right">Бесплатная доставка по Беларуси</span>
+            </div>
+          </div>
+          <div class="sectionImg">
+            <div class="arrow leftArrow">
+              <div class="arrowText">WOMEN</div>
+              <div class="reh m3"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+              <div class="reh m2"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+              <div class="reh m1"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+            </div>
+            <div class="text">
+              <h4>Смысл сайта</h4>
+              <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.</p>
+              <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
+            </div>
+          </div>
+        </div>
+        <div class="item section6"> 
+          <div class="line">
+            <div>
+              <span>Бесплатная доставка по Беларуси</span>
+              <span>Бесплатная доставка по Беларуси</span>
+              <span>Бесплатная доставка по Беларуси</span>
+              <span class="right">Бесплатная доставка по Беларуси</span>
+            </div>
+          </div>
+          <div class="head">
+            <div class="lineThin"></div>
+            <a href="#">
+            <div class="instagramInfo">
+              <span>Присоединяйтесь к нам</span>
+                <img src="IMG/Icons/black/uil_instagram(black).png"></br>
+            </div></a>
+            <div class="lineThin rightLine"></div>
+          </div>
+          <a href="#"><div class="instagramLink">@rawwwr_men</div></a>
+          <div class="photos">
+            <div class="row">
+              <a href="#" class="iLink"><img src="IMG/Image/man/Group 2.jpg"alt="instagram"></a>
+              <a href="#" class="iLink"><img src="IMG/Image/man/Group 3.jpg"alt="instagram"></a>
+              <a href="#" class="iLink"><img src="IMG/Image/man/Group 4.jpg"alt="instagram"></a>
+              <a href="#" class="iLink"><img src="IMG/Image/man/Group 1.jpg"alt="instagram"></a>
+              <a href="#" class="iLink"><img src="IMG/Image/man/Group 6.jpg"alt="instagram"></a>
+              <a href="#" class="right iLink"><img src="IMG/Image/man/Group 5.jpg"alt="instagram"></a>
+            </div>
+
+          </div>
+          <div class="form">
+            <div class="preText">БУДЬТЕ В КУРСЕ НАШИХ ПОСЛЕДНИХ НОВОСТЕЙ: ПОДПИШИТЕСЬ 
+              НА РАССЫЛКУ И ПОЛУЧАЙТЕ ИНФОРМАЦИЮ О ПОСЛЕДНИХ ПОСТУПЛЕНИЯХ И АКЦИЯХ
+            </div>
+            <form>
+              <div class="row">
+                <input type="text" placeholder="Введите  ваш email" class="formInput">
+                <button class="formButton">подписаться</button>
+              </div>
+              <div class="row last">
+                <input type="checkbox" class="checkBox">
+                <div class="postText">
+                  Отправляя заявку, вы соглашаетесь с правилами <a href="#">Политики конфиденциальности</a>. 
+                  Только новости и обновления. И никакого спама
+                </div>
+              </div>
+            </form>
+          </div>
+          <footer>
+            <div class="footerWrapper">
+              <div class="footerLeft">
+                <ul>
+                  <li class="footerLi" >о нас</li>
+                  <div class="lineThin"></div>
+                  <li class="footerLi">ип авдеев а.а.</li>
+                  <li class="footerLi">211391, Республика Беларусь, г.Орша, ул. <br/>
+                    Доминиканская, 33А
+                  </li>
+                  <li class="footerLi">
+                    +375 29 365 66 61
+                  </li>
+                  <li class="footerLi">
+                    Режим работы: <br/>
+                    Понедельник-пятница, <br/>
+                    с 8:00 до 17:00
+                  </li>
+                </ul>
+              </div>
+              <div class="footerCenter">
+                <div class="footerTopCenter">
+                  <a href="#"><img src="IMG/Icons/iconfinder_vk.png" alt="VKLogo"></a>
+                  <a href="#"><img src="IMG/Icons/iconfinder_pintere.png" alt="PILogo"></a>
+                  <a href="#"><img src="IMG/Icons/iconfinder_instagram.png" alt="INLogo" class="right"></a>
+                </div>
+                <div class="footerBottomCenter">
+                  <img src="IMG/Logo/Rawr_Logo_lettering.png" alt="Rawr_Logo_lettering">
+                </div>
+              </div>
+              <div class="footerRight">
+                <ul>
+                  <li class="footerLi">покупателям</li>
+                  <div class="lineThin"></div>
+                  <li class="footerLi"><a href="#">ОФОРМЛЕНИЕ ЗАКАЗА</a></li>
+                  <li class="footerLi"><a href="#">ДОСТАВКА</a></li>
+                  <li class="footerLi"><a href="#">ОПЛАТА</a></li>
+                  <li class="footerLi"><a href="#">ВОЗВРАТ</a></li>
+                  <li class="footerLi"><a href="#">Политика конфиденциальности</a></li>
+                </ul>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+      <ul class="dots" id="Slider2">
+        <li class="dot active" id="0">
+          <button></button>
+        </li>
+        <li class="dot" id="1">
+          <button></button>
+        </li>
+        <li class="dot" id="2">
+          <button></button>
+        </li>
+        <li class="dot" id="3">
+          <button></button>
+        </li>
+        <li class="dot" id="4">
+          <button></button>
+        </li>
+        <li class="dot" id="5">
+          <button></button>
+        </li>
+      </ul>
+  </div>
+  </div>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
 </body>
 </html>

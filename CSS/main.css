@@ -1,0 +1,446 @@
+html{
+  background-color: #666;
+}
+body{
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+
+#Page{
+}
+.item{
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: 100% 100%;
+  background-color: #fff;
+}
+
+.line{
+  position: relative;
+  height: 3.7vh;
+  background-color: #303030;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.48vh;
+  font-weight: 500;
+  z-index: 10;
+}
+.line div{
+  padding: 0 0.736%;
+  width: 100%;
+  display: inherit;
+  align-items: center;
+  justify-content: center;
+}
+.line span{
+  padding-right: 14vw;
+}
+
+.line .right, .right{
+  padding-right: 0;
+}
+.line .left{
+
+}
+
+.sectionImg{
+  position: relative;
+  width: 100vw;
+  height: 96.3vh;
+}
+.section1 .sectionImg{
+  background: url("../IMG/Image/man/image_1.jpg") no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+.w .section1 .sectionImg{
+  background: url("../IMG/Image/woman/image_1.jpg") no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+.section2 .sectionImg{
+  background: url("../IMG/Image/man/image_2.jpg") no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+.w .section2 .sectionImg{
+  background: url("../IMG/Image/woman/image_2.jpg") no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+.section3 .sectionImg{
+  background: url("../IMG/Image/man/image_3.jpg") no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+.w .section3 .sectionImg{
+  background: url("../IMG/Image/woman/image_3.jpg") no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+.section4 .sectionImg{
+  background: url("../IMG/Image/man/image_4.jpg") no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+.w .section4 .sectionImg{
+  background: url("../IMG/Image/woman/image_4.jpg") no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+.section5 .sectionImg{
+  background: #FF6E00;
+  z-index: 10;
+}
+.w .section5 .sectionImg{
+  background: #0066CC;
+  z-index: 10;
+}
+
+.section6 a{
+  text-decoration: none;
+  color: #000;
+}
+
+
+
+
+.text{
+  text-transform: uppercase;
+  font-size: 2.8vh;
+  line-height: 4vh;
+  text-align: center;
+  width: 71.875vw;
+  display: block;
+  margin:auto;
+  padding-top: 17.59vh;
+  
+}
+.text p,
+.text h4{
+  padding: 0;
+  margin: 0;
+  padding-bottom: 55px;
+}
+.text h4{
+  font-weight: 500;
+  font-size: 3.3vh;
+}
+.row{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Слайдер */ 
+ .slick-slider{
+ } 
+ /* Слайдер запущен */ 
+ .slick-slider.slick-initialized{} 
+ /* Слайдер с точками */ 
+ .slick-slider.slick-dotted{}
+
+/* Ограничивающая оболочка */ 
+.slick-list {
+}
+/* Лента слайдов */ 
+#Page .slick-track{
+  display: flex;
+  min-width: 0;
+}
+
+#full-slide .slick-track{
+  display: block;
+  min-width: 0;
+}
+.hide{
+  display: none;
+}
+/* Слайд */ 
+.slick-slide{
+}
+.slick-slide .slick-vertical{
+  border: none;
+} 
+/* Слайд активный (показывается) */ 
+.slick-slide.slick-active{} 
+/* Слайд основной */ 
+.slick-slide.slick-current{} 
+/* Слайд по центру */ 
+.slick-slide.slick-center{} 
+/* Клонированный слайд */ 
+.slick-slide.slick-cloned{}
+
+/* Стрелка */ 
+.slick-arrow{} 
+/* Стрелка влево */ 
+.slick-arrow.slick-prev{} 
+/* Стрелка вправо */ 
+.slick-arrow.slick-next{} 
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+
+/* Точки (булиты) */ 
+.slick-dots{ 
+  position: relative;
+  right: 8.854%;
+  bottom: 18.178%;
+  z-index: 10;
+} 
+.slick-dots li{} 
+/* Активная точка */ 
+.slick-dots li.slick-active{} 
+/* Элемент точки */ 
+.slick-dots li button{} 
+.down{
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 81.94vh;
+}
+.downButton{
+  background: url("../IMG/Icons/icon_navigation_down.png") no-repeat center;
+  background-size: contain;
+  width: 2.29vw;
+  height: 2.3vh;
+  border: none;
+  cursor: pointer;
+}
+
+.arrow{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.rightArrow{
+  left: 88.54vw;
+  top: 37.037vh;
+}
+.leftArrow{
+  right: 88.54vw;
+  top: 37.037vh;
+}
+.leftArrow div img{
+  transform: rotate(180deg);
+}
+.leftArrow .arrowText{
+  margin-left:0px;
+  margin-right: 10px;
+}
+.arrowText{
+  margin-left:10px;
+  line-height: 2.61vh;
+  font-size: 2.2vh;
+  font-weight: 500;
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.reh{
+  position:relative;
+  display: block;
+  height: 2.22vh;
+}
+.m1 {
+  animation: ani3 1.0s steps(5, start) infinite;
+  -webkit-animation: ani3 1.0s steps(5, start) infinite;
+}
+.m2 {
+  animation: ani2 1.0s steps(5, start) infinite;
+  -webkit-animation: ani2 1.0s steps(5, start) infinite;
+}
+.m3 {
+  animation: ani1 1.0s steps(5, start) infinite;
+  -webkit-animation: ani1 1.0s steps(5, start) infinite;
+}
+@keyframes ani1 {
+   0% {opacity:0.1;}
+  11% {opacity:0.1;}
+  22% {opacity:0.1;}
+  33% {opacity:0.15;}
+  44% {opacity:0.25;}
+  55% {opacity:0.5;}
+  66% {opacity:1;}
+  77% {opacity:0.5;}
+  88% {opacity:0.25;}
+  100% {opacity:0.15;}
+}
+@keyframes ani2 {
+   0% {opacity:0.1;}
+  11% {opacity:0.15;}
+  22% {opacity:0.25;}
+  33% {opacity:0.5;}
+  44% {opacity:1;}
+  55% {opacity:0.5;}
+  66% {opacity:0.25;}
+  77% {opacity:0.15;}
+  88% {opacity:0.1;}
+  100% {opacity:0.1;}
+}
+@keyframes ani3 {
+   0% {opacity:0.25;}
+  11% {opacity:0.5;}
+  22% {opacity:1;}
+  33% {opacity:0.5;}
+  44% {opacity:0.25;}
+  55% {opacity:0.15;}
+  66% {opacity:0.1;}
+  77% {opacity:0.1;}
+  88% {opacity:0.1;}
+  100% {opacity:0.15;}
+}
+#Btn{
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1.85vh;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+  padding: 0.93vh 1.98vw;
+  border: 2px solid #fff;
+  transition: all 300ms ease;
+}
+.linkButton{
+  display: inline;
+}
+#Btn::before{
+  position: absolute;
+  content:'';
+  width: 0%;
+  height: 100%;
+  top:0;
+  left: auto;
+  right: 0;
+  z-index: 1;
+  transition: all 300ms ease;
+}
+#Btn:hover::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+#Btn:hover{
+  color:#000;
+}
+.btnWrapper{
+  position: absolute;
+  width:100vw;
+  display: flex;
+  top: 70.83vh;
+  justify-content: center; 
+  transition: all 300ms ease;
+}
+#manBtnWrapper{
+}
+#womanBtsnWrapper{
+}
+#hudiBtnWrapper{
+  left:38.073vw;
+  position: absolute;
+}
+#suitBtnWrapper{
+  right:34.895vw;
+  position: absolute;
+}
+#jacketBtnWrapper{
+  left:35.937vw;
+  position: absolute;
+}
+#pantsBtnWrapper{
+  right:36.302vw;
+  position: absolute;
+}
+.dots{
+  position: relative;
+  right: 8.854%;
+  left:90.36%;
+  bottom: 45.37vh; 
+  z-index: 10;
+  display: block;
+  padding: 0;
+  margin:0;
+}
+
+.dots li{
+  list-style: none;
+  margin-bottom:0.93vh;
+  width:0.78vw;
+  height: 1.39vh;
+}
+.dots li button{
+  background: URL("../IMG/Vectors/Dot.svg") no-repeat center;
+  width:100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.dots li.active button{
+  background: URL("../IMG/Vectors/ActiveDot.svg") no-repeat center;
+  background-size: contain;
+}
+.dots li.b button{
+  background: URL("../IMG/Vectors/black/Dot.svg") no-repeat center;
+}
+.dots li.active.b button{
+  background: URL("../IMG/Vectors/black/ActiveDot.svg") no-repeat center;
+  background-size: contain;
+}
+@media (max-width: 1831px){
+  .line span{
+      padding-right: 13vw;
+  }
+}
+@media (max-width: 1750px){
+  .line span{
+      padding-right: 12vw;
+      font-size: 1.4vh;
+  }
+}
+@media (max-width: 1566px){
+  .line span{
+      padding-right: 11vw;
+      font-size: 1.35vh;
+  }
+}
+
+@media (orientation:portrait)/* and (device-aspect-ratio: 3/2)*/{
+  .dots{
+    bottom: 45.37vh;
+  }
+  .btnWrapper{
+    top: 79.56vh;
+  }
+  #Btn{
+    padding: 0.93vh 5.26vw;
+  }
+  .down{
+    top: 89.62vh;
+  }
+  .downButton{
+    width: 5.27vw;
+    height: 2.09vh;
+  }
+} 

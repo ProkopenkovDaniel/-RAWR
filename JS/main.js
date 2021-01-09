@@ -143,6 +143,7 @@ function AddSlider($fullSlide){
       placeholders:false,
       rows:0,
       easing: 'easeOutQuad',
-      speed: 1000
+      speed: 1000,
+      mobileFirst: true
     });
 }

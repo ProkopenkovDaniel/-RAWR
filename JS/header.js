@@ -39,7 +39,6 @@ function MakeHeaderBlack(){
     $header.find("#search").attr('id', 'search_b');
     $header.find("#account").attr('id', 'account_b');
     $header.find("#basket").attr('id', 'basket_b');
-    $header.find("#searchLine").attr('id', 'searchLine_b');
     $header.find(".leftMenu a").css({'color':'#000'});
     $header.find(".leftMenu a").addClass("b");
     $header.find(".leftMenu a.red").css({'color':'#DA1E28'});
@@ -55,7 +54,6 @@ function MakeHeaderWhite(){
     $header.find("#search_b").attr('id', 'search');
     $header.find("#account_b").attr('id', 'account');
     $header.find("#basket_b").attr('id', 'basket');
-    $header.find("#searchLine_b").attr('id', 'searchLine');
     $header.find(".leftMenu a").css({'color':'#fff'});
     $header.find(".leftMenu a").removeClass("b");
     $header.find(".leftMenu a.red").css({'color':'#DA1E28'});

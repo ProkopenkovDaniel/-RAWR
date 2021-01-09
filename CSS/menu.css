@@ -4,6 +4,7 @@ li .red,
 .leftMenu .red{
 color:#DA1E28;
 }
+
 header{
 display: flex;
 align-items: center;
@@ -26,6 +27,7 @@ header ul{
 display: flex;
 padding:0;
 margin:0;
+align-content: center;
 }
 
 .leftMenu{
@@ -36,10 +38,20 @@ font-weight: 700;
 font-size: 1.4vh;
 text-transform: uppercase;
 }
-.leftMenu ul li{
+.leftMenu li{
     list-style: none;
     padding: 0 0;
-    padding-right: 24px;
+    position: absolute;
+    top:-0.46vh;
+}
+.leftMenu #li2{
+  left: 5vw;
+}
+.leftMenu #li3{
+    left: 11vw;
+}
+.leftMenu #li4{
+    left: 17vw;
 }
 .leftMenu a{
     display: inline-block;
@@ -53,7 +65,7 @@ text-transform: uppercase;
     background-color: #fff;
     display: block;
     content: "";
-    height: 2px;
+    height: 1.5px;
     width: 0%;
     -webkit-transition: width .3s ease-in-out;
     -moz--transition: width .3s ease-in-out;
@@ -104,7 +116,6 @@ margin-right: 45px;
 .menuItem .img.b{
     background: url("../IMG/Vectors/black/arrow_menu.svg") center no-repeat;
 }
-
 .leftMenu,
 .rightMenu{
     position: absolute;
@@ -113,27 +124,28 @@ margin-right: 45px;
     left:8.854vw;
 }
 .rightMenu{
-   right:8.854vw;
+   right:0vw;
 }
 #search{
     background: url("../IMG/Icons/icon_Magnifier.png")no-repeat left;
     background-size: contain;
-    width: 9.375vw;
+    width: 4.375vw;
+    height: 5.06vh;
 }
 #search_b{
     background: url("../IMG/Icons/black/icon_Magnifier.png")no-repeat left;
     background-size: contain;
-    width: 9.375vw;
+    width: 4.375vw;
 }
 #searchLine{
-    height: 1px;
+    height: 2px;
     background-color: #fff;
-    width: 9.375vw;
+    width: 14.15vw;
 }
 #searchLine_b{
     height: 2px;
     background-color: #000;
-    width: 9.375vw;
+    width: 14.15vw;
 }
 #saved{
     background: url("../IMG/Icons/icon_marker.png") no-repeat center;
@@ -249,4 +261,81 @@ width: 1.7vw;
 .addedMenu li:hover .lineItem{
     width: 15px;
     margin-right: 6px;
+}
+@media (orientation:portrait){
+    .notForPortrait{
+      display: none;
+    }
+    .justForPortrait{
+        display:block;
+    }
+    .logo{
+    width: 11.75vw;
+    height: 5.19vh;
+    }
+    .menuItemLink{
+        margin-right: 0;
+        }
+    .rightMenu li{
+        position: absolute;
+        top:-1.2vh;
+    }
+    .rightMenu #li1{
+        right: 3.59vw;
+    }
+    .rightMenu #li2{
+        right: 13.43vw;
+    }
+    .rightMenu #li3{
+        right: 22.66vw;
+    }
+    .rightMenu #li4{
+        right: 71.22vw;
+    }
+    .rightMenu #li5{
+        right:91.8vw;
+    }
+    #humburger{
+        background: url("../IMG/Icons/Hamburger.png")no-repeat left;
+        background-size: contain;
+        width: 5.04vw;
+        height: 2.5vh;
+    }
+    #humburger_b{
+        background: url("../IMG/Icons/black/Humburger.svg")no-repeat left;
+        background-size: contain;
+        width: 4.375vw;
+    }
+    #search{
+        width: 3.59vw;
+        height: 2.51vh;
+    }
+    #search_b{
+        width: 3.59vw;
+        height: 2.51vh;
+    }
+    #saved{
+        width: 2.87vw;
+        height: 2.51vh
+    }
+    #saved_b{
+        width: 2.87vw;
+        height: 2.51vh
+    }
+    #account{
+        width: 2.87vw;
+        height: 2.51vh
+    }
+    #account_b{
+        width: 2.87vw;
+        height: 2.51vh
+    }
+    #basket{
+    width: 3.59vw;
+    height: 2.51vh;
+    }
+    #basket_b{
+        width: 3.59vw;
+        height: 2.51vh;
+    }
 }

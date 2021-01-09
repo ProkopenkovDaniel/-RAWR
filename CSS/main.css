@@ -12,7 +12,9 @@ body{
   font-family: 'Roboto', sans-serif;
   color: #fff;
 }
-
+.jusrForPortrait{
+  display: none;
+}
 #Page{
 }
 .item{
@@ -427,6 +429,9 @@ body{
 }
 
 @media (orientation:portrait)/* and (device-aspect-ratio: 3/2)*/{
+  .notForPortrait{
+    display: none;
+  }
   .dots{
     bottom: 45.37vh;
   }
@@ -443,4 +448,26 @@ body{
     width: 5.27vw;
     height: 2.09vh;
   }
+  .leftArrow,
+  .rightArrow{
+    top: 48.83vh;
+  }
+  .leftArrow{
+    right:88.83vw;
+  }
+  .rightArrow{
+    border-left-color:88.83vw;
+  }
+  .text{
+    text-transform: uppercase;
+    font-size: 2.09vh;
+    line-height: 2.9vh;
+    text-align: center;
+    width: 71.875vw;
+    display: block;
+    margin:auto;
+    padding-top: 12.548vh;
+    
+  }
+
 } 

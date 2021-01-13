@@ -233,4 +233,15 @@ footer .lineThin{
     .footerTopCenter a{
         margin:3.9vh 3.152vw 7.63vh 0;
     }
+    .photos > .row{
+        display:block;
+    }
+    .row a.iLink{
+        margin-right: 2.39vw;
+        width: 29.86vw;
+        height: 18.17vh;
+    }
+    .photos {
+        height: 39.51vh;
+    }
 }

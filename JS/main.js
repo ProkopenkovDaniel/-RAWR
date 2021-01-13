@@ -1,5 +1,20 @@
 $(window).on("load", function(){
-  $pageSlider = $("#Page").slick({
+  $pageSlider = $("#Page").on("beforeChange", function(event, slick, currentSlide, nextSlide){
+    slickIsChanging = true;
+    
+    if (!IsSlideBlack(GetActiveSlider())){
+      if (!isAddedMenuOpen) MakeHeaderWhite();
+    }
+  })
+  .on("afterChange", function(event, slick, currentSlide){
+    if (IsSlideBlack(GetActiveSlider())){
+      MakeHeaderBlack();
+      } else{
+        if (!isAddedMenuOpen) MakeHeaderWhite();
+    }
+    slickIsChanging = false;
+  })
+  .slick({
     prevArrow: false,
     nextArrow: false,
     slidesToShow: 1,
@@ -21,14 +36,6 @@ $(window).on("load", function(){
       AddSlider($fullSlide);
     });
 });
-
-$(window).on("orientationchange", function(event){
-  $(".slider").each(function(){
-    var $fullSlide = $(this);
-    // AddSlider($fullSlide, event.orientation);
-  });
-});
-
 
 function AddSlider($fullSlide){
   var $sections = $fullSlide.children(".item");
@@ -97,14 +104,7 @@ function AddSlider($fullSlide){
   $("#Page").on("init", function(){
     rightButtonEvent($pageSlider);
     leftButtonEvent($pageSlider);
-  })
-  .on("beforeChange", function(event, slick, currentSlide, nextSlide){
-   slickIsChanging = true;
- })
- .on("afterChange", function(event, slick, currentSlide){
-   
-   slickIsChanging = false;
- });
+  });
 
   $fullSlide
     .on("init", function(){
@@ -112,12 +112,12 @@ function AddSlider($fullSlide){
       downButtonEvent($fullSlide);
     })
     .on("beforeChange", function(event, slick, currentSlide, nextSlide){
-       if (slickIsChanging == false){
-        ChangeActiveDot($fullSlide, currentSlide, nextSlide);
-       }
+        if (slickIsChanging == false){
+          ChangeActiveDot($fullSlide, currentSlide, nextSlide);
+        }
       slickIsChanging = true;
       if (slick.slideCount-1 != nextSlide){
-        MakeHeaderWhite();
+        if (!isAddedMenuOpen) MakeHeaderWhite();
         MakeDodsWhite($fullSlide.siblings(".dots").attr('id'))
       } 
     })
@@ -127,9 +127,10 @@ function AddSlider($fullSlide){
         MakeHeaderBlack();
         MakeDodsBlack($fullSlide.siblings(".dots").attr('id'))
       } else{
-        MakeHeaderWhite();
-        MakeDodsWhite($fullSlide.siblings(".dots").attr('id'))
+        if (!isAddedMenuOpen) MakeHeaderWhite();
+        MakeDodsWhite($fullSlide.siblings(".dots").attr('id'));
       }
+
       slickIsChanging = false;
     })
     .slick({
@@ -148,4 +149,11 @@ function AddSlider($fullSlide){
       speed: 1000
       // mobileFirst: true
     });
+}
+
+function GetActiveSlider(){
+  $activePageTrack = $("#Page").children(".slick-list").children(".slick-track");
+  $activePageSlide = $activePageTrack.children(".slick-active");
+  $activeSlider = $activePageSlide.find(".slider");
+  return $activeSlider;
 }

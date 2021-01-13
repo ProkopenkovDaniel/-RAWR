@@ -14,7 +14,6 @@ width: 100%;
 height: 12.24vh;
 z-index: 10;
 top:3.7vh;
-/* padding-top: 2.8vh; */
 
 }
 .headerWrapper{
@@ -23,7 +22,6 @@ align-items: center;
 justify-content: center;
 width: 100%;
 padding-top: 2.8vh;
-/* пока не знаю */
 }
 header ul{
 display: flex;
@@ -31,7 +29,6 @@ padding:0;
 margin:0;
 align-content: center;
 }
-
 .leftMenu{
 display: block;
 align-self: left;
@@ -81,12 +78,10 @@ text-transform: uppercase;
     width:100%;
     left:0;
 }
-
 ul li{
 list-style: none;
 padding: 0 0;
 }
-
 .logo{
     position:absolute;
     left:47.55vw;
@@ -283,11 +278,8 @@ width: 1.7vw;
     margin-right: 6px;
 }
 
-.hide.addedMenuPortrait{
-    display: none;
-    transition: all 300ms ease;
-}
 .addedMenuPortrait{
+    display: none;
     font-weight: 700;
     font-size: 2.01vh;
     line-height: 2.55vh;
@@ -301,10 +293,22 @@ width: 1.7vw;
     justify-self: center;
     align-items: center;
     transition: all 300ms ease;
+    z-index: 10;
+}
+li.humburger:hover .addedMenuPortrait{
+    display: block;
 }
 .addedMenuPortrait > ul{
     margin-top: 7.12vh;
     margin-left:5.99vw;
+}
+
+.addedMenuPortrait ul li ul > li:first-child{
+    padding-bottom: 1.8vh;
+}
+.addedMenuPortrait ul li ul > li:last-child{
+    padding-top: 1.8vh;
+    color:#DA1E28;
 }
 .addedMenuPortrait ul{
     display: block;
@@ -312,6 +316,9 @@ width: 1.7vw;
 .addedMenuPortrait a{
     text-decoration: none;
     color: #000;
+}
+.rightMenu .addedMenuPortrait li{
+    position:relative;
 }
 .addedMenuPortrait ul li{
     padding-bottom: 1.67vh;
@@ -322,14 +329,31 @@ width: 1.7vw;
     display:block;
     transition: all 300ms ease;
 }
+.addedMenuPortrait ul li:hover span.dropDown,
+.addedMenuPortrait ul li:focus span.dropDown{
+    background: url("../IMG/Icons/black/dropUp.svg") no-repeat center;
+}
 .addedMenuPortrait ul li ul{
     display: none;
     font-weight: 500;
     font-size: 1.67vh;
     transition: all 300ms ease;
+    margin-top: 3vh;
 }
 .addedMenuPortrait ul li ul li{
     padding:0;
+}
+span.dropDown{
+    display: block;
+    background: url("../IMG/Icons/black/dropDown.svg") no-repeat center;
+    background-size: contain;
+    width: 2.87vw;
+    height: 1.08vh;
+    margin-left:1.2vw;
+}
+a.dropDown{
+    display: flex;
+    align-content: center;
 }
 @media (orientation:portrait){
     .notForPortrait{

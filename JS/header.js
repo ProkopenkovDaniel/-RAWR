@@ -1,41 +1,49 @@
+var isAddedMenuOpen=false;
 $(window).on("load", function(){
     var $items = $(".menuItem");
     $items.each(function(){
         $(this).hover(function(){
-            var $item = $(this);
-            var id = $item.attr('id');
-            (id == "menItem")? MakeAddedMenuVisible("men"):MakeAddedMenuVisible("women");
-            MakeHeaderBlack();
+            isAddedMenuOpen = true;
             var $li = $(this).parent("li");
             var $sibLi = $li.siblings(".liMenuItem");
             var $sibItem = $sibLi.children(".menuItem");
             if($sibItem.is(":focus")){
                 $sibItem.blur();
             }
-        }, function(){
-            if (!$(this).is(":focus")){
-                var id = $(this).attr('id');
-                (id == "menItem")? MakeAddedMenuUnvisible("men"):MakeAddedMenuUnvisible("women");
-                MakeHeaderWhite();
-            }
-        });
-        $(this).focus(function(){
             var $item = $(this);
             var id = $item.attr('id');
             (id == "menItem")? MakeAddedMenuVisible("men"):MakeAddedMenuVisible("women");
             MakeHeaderBlack();
+            SetBackgroundColor("#fff");
+        }, function(){
+            if (!$(this).is(":focus")){
+                var id = $(this).attr('id');
+                (id == "menItem")? MakeAddedMenuUnvisible("men"):MakeAddedMenuUnvisible("women");
+                if (!IsSlideBlack(GetActiveSlider())) MakeHeaderWhite();
+                SetBackgroundColor("none");
+                isAddedMenuOpen = false;
+            }
+        });
+        $(this).focus(function(){
+            isAddedMenuOpen = true;
+            var $item = $(this);
+            var id = $item.attr('id');
+            (id == "menItem")? MakeAddedMenuVisible("men"):MakeAddedMenuVisible("women");
+            MakeHeaderBlack();
+            SetBackgroundColor("#fff");
         });
         $(this).blur(function(){
             var id = $(this).attr('id');
             (id == "menItem")? MakeAddedMenuUnvisible("men"):MakeAddedMenuUnvisible("women");
-            MakeHeaderWhite(); 
+            if (!IsSlideBlack(GetActiveSlider())) MakeHeaderWhite(); 
+            SetBackgroundColor("none");
+            isAddedMenuOpen = false;
         })
-    });
-    $("#humburger").hover(MakeAddedMenuPortraitVisible(), MakeAddedMenuPortraitUnvisible());
+    }); 
 });
+$("#humburger").hover(MakeAddedMenuPortraitVisible(), MakeAddedMenuPortraitUnvisible());
 function MakeHeaderBlack(){
     $header = $("header");
-    $header.css({'background':'#fff'})
     $header.find("#saved").attr('id', 'saved_b');
     $header.find("#search").attr('id', 'search_b');
     $header.find("#searchLine").attr('id', 'searchLine_b');
@@ -50,10 +58,12 @@ function MakeHeaderBlack(){
     $header.find(".menuItem .img").addClass("b");
 
 }
-
+function SetBackgroundColor(color){
+    $header = $("header");
+    $header.css({'background':color})
+}
 function MakeHeaderWhite(){
     $header = $("header");
-    $header.css({'background':'none'})
     $header.find("#saved_b").attr('id', 'saved');
     $header.find("#search_b").attr('id', 'search');
     $header.find("#searchLine_b").attr('id', 'searchLine');
@@ -75,8 +85,18 @@ function MakeAddedMenuUnvisible(id){
 }
 
 function MakeAddedMenuPortraitVisible(){
-    $(".addedMeniPortrait").removeClass("hide");
+    $(".addedMenuPortrait").removeClass("hide");
 }
 function MakeAddedMenuPortraitUnvisible(){
-    $(".addedMeniPortrait").addClass("hide");
+    $(".addedMenuPortrait").addClass("hide");
+}
+
+function IsSlideBlack($slider){
+    var index = $slider.slick("slickCurrentSlide");
+    $activeSlide = $('[data-slick-index="'+index+'"]');
+    if ($activeSlide.hasClass("blackSlide")){
+        return true;
+    } else {
+        return false;
+    }
 }

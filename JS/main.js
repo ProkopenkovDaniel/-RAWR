@@ -21,27 +21,18 @@ $(window).on("load", function(){
       AddSlider($fullSlide);
     });
 });
-// $(window).resize(function(){
-//   var $sections = $fullSlide.children(".item");
-//   var $sectionImgs = $fullSlide.find(".sectionImg");
-//   $sections.css({height: $(window).height()});
-//   $sections.css({width: $(window).width()});
-//   var height = $(window).height() - 40;
-//   var width = $(window).width();
-//   $sectionImgs.css({height: height});
-//   $sectionImgs.css({width: width});
-// });
+
+$(window).on("orientationchange", function(event){
+  $(".slider").each(function(){
+    var $fullSlide = $(this);
+    // AddSlider($fullSlide, event.orientation);
+  });
+});
 
 
 function AddSlider($fullSlide){
   var $sections = $fullSlide.children(".item");
   var $sectionImgs = $fullSlide.find(".sectionImg");
-  // $sections.css({height: $(window).height()});
-  // $sections.css({width: $(window).width()});
-  // var height = $(window).height() - ($(window).height()*0.037);
-  // var width = $(window).width();
-  // $sectionImgs.css({height: height});
-  // $sectionImgs.css({width: width});
   var slickIsChanging = false;
   var slideIndex = 0;
   var slideCount = $sections.length;
@@ -106,22 +97,32 @@ function AddSlider($fullSlide){
   $("#Page").on("init", function(){
     rightButtonEvent($pageSlider);
     leftButtonEvent($pageSlider);
-  });
+  })
+  .on("beforeChange", function(event, slick, currentSlide, nextSlide){
+   slickIsChanging = true;
+ })
+ .on("afterChange", function(event, slick, currentSlide){
+   
+   slickIsChanging = false;
+ });
+
   $fullSlide
     .on("init", function(){
       mouseWheel($fullSlide);
       downButtonEvent($fullSlide);
     })
     .on("beforeChange", function(event, slick, currentSlide, nextSlide){
+       if (slickIsChanging == false){
+        ChangeActiveDot($fullSlide, currentSlide, nextSlide);
+       }
       slickIsChanging = true;
-      ChangeActiveDot($fullSlide, currentSlide, nextSlide);
       if (slick.slideCount-1 != nextSlide){
         MakeHeaderWhite();
         MakeDodsWhite($fullSlide.siblings(".dots").attr('id'))
       } 
     })
     .on("afterChange", function(event, slick, currentSlide){
-      slickIsChanging = false;
+      SetActiveDot($fullSlide, currentSlide);
       if (slick.slideCount-1 == currentSlide){
         MakeHeaderBlack();
         MakeDodsBlack($fullSlide.siblings(".dots").attr('id'))
@@ -129,6 +130,7 @@ function AddSlider($fullSlide){
         MakeHeaderWhite();
         MakeDodsWhite($fullSlide.siblings(".dots").attr('id'))
       }
+      slickIsChanging = false;
     })
     .slick({
       prevArrow: false,
@@ -143,7 +145,7 @@ function AddSlider($fullSlide){
       placeholders:false,
       rows:0,
       easing: 'easeOutQuad',
-      speed: 1000,
-      mobileFirst: true
+      speed: 1000
+      // mobileFirst: true
     });
 }

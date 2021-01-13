@@ -104,9 +104,21 @@ padding: 0 0;
 }
 
 .menuItemLink{
-height: 3.06vh;
-display: block;
-margin-right: 45px;
+    height: 3.06vh;
+    display: block;
+    color:#fff;
+    font-size: 1.1vh;
+    width: 500;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+}
+.menuItemLink span{
+    display:block;
+    padding-top: 0.75vh;
+}
+.menuItemLink span.sd{
+    padding-top: 1.1vh;
 }
 .menuItem .img{
     display:inline-block;
@@ -130,11 +142,14 @@ margin-right: 45px;
 .rightMenu{
    left:69.95vw;
 }
+.rightMenu ul li{
+    margin-right: 45px;
+}
 #search{
     background: url("../IMG/Icons/icon_Magnifier.png")no-repeat left;
     background-size: contain;
-    width: 4.375vw;
-    height: 5.06vh;
+    width: 1.7vw;
+    height: 2.96vh;
 }
 #search_b{
     background: url("../IMG/Icons/black/icon_Magnifier.png")no-repeat left;
@@ -144,12 +159,12 @@ margin-right: 45px;
 #searchLine{
     height: 2px;
     background-color: #fff;
-    width: 14.15vw;
+    width: 9.64vw;
 }
 #searchLine_b{
     height: 2px;
     background-color: #000;
-    width: 14.15vw;
+    width: 9.64vw;
 }
 #saved{
     background: url("../IMG/Icons/icon_marker.png") no-repeat center;
@@ -267,6 +282,55 @@ width: 1.7vw;
     width: 15px;
     margin-right: 6px;
 }
+
+.hide.addedMenuPortrait{
+    display: none;
+    transition: all 300ms ease;
+}
+.addedMenuPortrait{
+    font-weight: 700;
+    font-size: 2.01vh;
+    line-height: 2.55vh;
+    background-color: #fff;
+    position:fixed;
+    left:0;
+    width: 37.53vw;
+    height: 96.23vh;
+    top:3.77vh;
+    color: #000;
+    justify-self: center;
+    align-items: center;
+    transition: all 300ms ease;
+}
+.addedMenuPortrait > ul{
+    margin-top: 7.12vh;
+    margin-left:5.99vw;
+}
+.addedMenuPortrait ul{
+    display: block;
+}
+.addedMenuPortrait a{
+    text-decoration: none;
+    color: #000;
+}
+.addedMenuPortrait ul li{
+    padding-bottom: 1.67vh;
+}
+
+.addedMenuPortrait ul li:hover ul,
+.addedMenuPortrait ul li:focus ul{
+    display:block;
+    transition: all 300ms ease;
+}
+.addedMenuPortrait ul li ul{
+    display: none;
+    font-weight: 500;
+    font-size: 1.67vh;
+    transition: all 300ms ease;
+}
+.addedMenuPortrait ul li ul li{
+    padding:0;
+}
 @media (orientation:portrait){
     .notForPortrait{
       display: none;
@@ -279,7 +343,13 @@ width: 1.7vw;
     width: 11.75vw;
     height: 5.19vh;
     }
-    .menuItemLink{
+    .menuItemLink span{
+        padding-top: 0.4vh;
+    }
+    .menuItemLink span.sd{
+        padding-top: 0.75vh;
+    }
+    .rightMenu ul li{
         margin-right: 0;
     }
     .rightMenu{

@@ -16,13 +16,24 @@ function InitSliderDots($slider){
             $slider.siblings().children("#"+currentIndex).removeClass("active");
             $slider.slick("slickGoTo", id, false);
             $(this).parent().addClass("active");
+            ChangeActiveDot($slider, currentIndex, id);
         });
     });
 }
 
 function ChangeActiveDot($slider, currentDot, nextDot){
     $slider.siblings().children("#"+currentDot).removeClass("active");
+    $slider.siblings().children(".dot").each(function(){
+        $(this).removeClass("active");
+    })
     $slider.siblings().children("#"+nextDot).addClass("active");
+}
+
+function SetActiveDot($slider, currentDot){
+    $slider.siblings().children(".dot").each(function(){
+        $(this).removeClass("active");
+    })
+    $slider.siblings().children("#"+currentDot).addClass("active");
 }
 
 function MakeDodsBlack(id){

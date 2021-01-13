@@ -42,13 +42,13 @@
             <div id="searchLine"></div>
           </li>
           <li id="li3">
-            <a href="#" id="saved" class="menuItemLink"></a>
+            <a href="#" id="saved" class="menuItemLink"><span>0</span></a>
           </li>
           <li id="li2">
             <a href="#" id="account" class="menuItemLink"></a>
           </li>
           <li id="li1">
-            <a href="#" id="basket" class="menuItemLink"></a>
+            <a href="#" id="basket" class="menuItemLink"><span class="sd">0</span></a>
           </li>
         </ul>
       </div>
@@ -149,6 +149,42 @@
           </div>
         </div>
       </div>
+      <div class=" hide addedMenuPortrait">
+        <ul>
+          <li><a href="#">ЖЕНЩИНЫ</a>
+            <ul>
+              <li><a href="#">Новинки</a></li>
+              <li><a href="#">Боди</a></li>
+              <li><a href="#">Брюки И Леггинсы</a></li>
+              <li><a href="#">Джемперы И Кардиганы</a></li>
+              <li><a href="#">Джинсы</a></li>
+              <li><a href="#">Комбинезоны</a></li>
+              <li><a href="#">Костюмы</a></li>
+              <li><a href="#">Куртки И Пальто</a></li>
+              <li><a href="#">Платья</a></li>
+              <li><a href="#">Рубашки</a></li>
+              <li><a href="#">Футболки И Топы</a></li>
+              <li><a href="#">Худи</a></li>
+              <li><a href="#">Шорты</a></li>
+              <li><a href="#" class="red">SALE</a>
+            </ul>
+          </li>
+          <li><a href="#">МУЖЧИНЫ</a>
+          <ul>
+            <li><a href="#">Новинки</a></li>
+            <li><a href="#">Брюки</a></li>
+            <li><a href="#">Джемперы и Кардиганы</a></li>
+            <li><a href="#">Костюмы</a></li>
+            <li><a href="#">Куртки</a></li>
+            <li><a href="#">Футболки</a></li>
+            <li><a href="#">Худи</a></li>
+            <li><a href="#">Шорты</a></li>
+            <li><a href="#" class="red">SALE</a></li>
+          </ul></li>
+          <li><a>LOOKBOOK</a></li>
+          <li><a>ИНФОРМАЦИЯ</a></li>
+        </ul>
+      </div>
   </header>
   <div id="Page">
     <div class="hard">
@@ -193,7 +229,7 @@
             <div class="linkButton" id="hudiBtnWrapper">
               <a id="Btn">худи</a>
             </div>
-            <div class="linkButton" id="suitBtnWrapper">
+            <div class="linkButton notForPortrait" id="suitBtnWrapper">
               <a id="Btn">костюмы</a>
             </div>
           </div>
@@ -208,6 +244,32 @@
           </div>
         </div>
       </div>
+      <!-- <div class="item section2i justForPortrait">
+        <div class="line">
+          <div>
+            <span class="notForPortrait">Бесплатная доставка по Беларуси</span>
+            <span class="notForPortrait">Бесплатная доставка по Беларуси</span>
+            <span>Бесплатная доставка по Беларуси</span>
+            <span class="right">Бесплатная доставка по Беларуси</span>
+          </div>
+        </div>
+        <div class="sectionImg">
+          <div class="btnWrapper">
+            <div class="linkButton" id="suitBtnWrapper">
+              <a id="Btn">костюмы</a>
+            </div>
+          </div>
+          <div class="arrow rightArrow">
+            <div class="reh m1"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+            <div class="reh m2"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+            <div class="reh m3"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+            <div class="arrowText">MEN</div>
+          </div>
+          <div class="down">
+            <button class="downButton"></button>
+          </div>
+        </div>
+      </div> -->
       <div class="item section3">
         <div class="line">
           <div>
@@ -228,7 +290,7 @@
             <div class="linkButton" id="jacketBtnWrapper">
               <a id="Btn">куртки</a>
             </div>
-            <div class="linkButton" id="pantsBtnWrapper">
+            <div class="linkButton notForPortrait" id="pantsBtnWrapper">
               <a id="Btn">брюки</a>
             </div>
           </div>
@@ -237,6 +299,32 @@
           </div>
         </div>
       </div>
+      <!-- <div class="item section3i justForPortrait">
+        <div class="line">
+          <div>
+            <span class="notForPortrait">Бесплатная доставка по Беларуси</span>
+            <span class="notForPortrait">Бесплатная доставка по Беларуси</span>
+            <span>Бесплатная доставка по Беларуси</span>
+            <span class="right">Бесплатная доставка по Беларуси</span>
+          </div>
+        </div>
+        <div class="sectionImg">
+          <div class="arrow rightArrow">
+            <div class="reh m1"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+            <div class="reh m2"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+            <div class="reh m3"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+            <div class="arrowText">MEN</div>
+          </div>
+          <div class="btnWrapper">
+            <div class="linkButton" id="pantsBtnWrapper">
+              <a id="Btn">брюки</a>
+            </div>
+          </div>
+          <div class="down">
+            <button class="downButton"></button>
+          </div>
+        </div>
+      </div> -->
       <div class="item section4">
         <div class="line">
           <div>
@@ -401,6 +489,12 @@
       <li class="dot" id="5">
         <button></button>
       </li>
+      <li class="dot justForPortrait" id="6">
+        <button></button>
+      </li>
+      <li class="dot justForPortrait" id="7">
+        <button></button>
+      </li>
     </ul>
   </div>
     <div class="hard">
@@ -451,7 +545,7 @@
               <div class="linkButton" id="hudiBtnWrapper">
                 <a id="Btn">худи</a>
               </div>
-              <div class="linkButton" id="suitBtnWrapper">
+              <div class="linkButton notForPortrait" id="suitBtnWrapper">
                 <a id="Btn">костюмы</a>
               </div>
             </div>
@@ -460,6 +554,32 @@
             </div>
           </div>
         </div>
+        <!-- <div class="item section2i justForPortrait" id = "section2">
+          <div class="line">
+            <div>
+              <span class="notForPortrait">Бесплатная доставка по Беларуси</span>
+              <span class="notForPortrait">Бесплатная доставка по Беларуси</span>
+              <span>Бесплатная доставка по Беларуси</span>
+              <span class="right">Бесплатная доставка по Беларуси</span>
+            </div>
+        </div>
+          <div class="sectionImg">
+            <div class="arrow leftArrow">
+              <div class="arrowText">WOMEN</div>
+              <div class="reh m3"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+              <div class="reh m2"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+              <div class="reh m1"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+            </div>
+            <div class="btnWrapper">
+              <div class="linkButton" id="suitBtnWrapper">
+                <a id="Btn">костюмы</a>
+              </div>
+            </div>
+            <div class="down">
+              <button class="downButton"></button>
+            </div>
+          </div>
+        </div> -->
         <div class="item section3" id = "section3">
           <div class="line">
             <div>
@@ -480,7 +600,7 @@
               <div class="linkButton" id="jacketBtnWrapper">
                 <a id="Btn">куртки</a>
               </div>
-              <div class="linkButton" id="pantsBtnWrapper">
+              <div class="linkButton notForPortrait" id="pantsBtnWrapper">
                 <a id="Btn">брюки</a>
               </div>
             </div>
@@ -489,6 +609,32 @@
             </div>
           </div>
         </div>
+        <!-- <div class="item section3i justForPortrait" id = "section3">
+          <div class="line">
+            <div>
+              <span class="notForPortrait">Бесплатная доставка по Беларуси</span>
+              <span class="notForPortrait">Бесплатная доставка по Беларуси</span>
+              <span>Бесплатная доставка по Беларуси</span>
+              <span class="right">Бесплатная доставка по Беларуси</span>
+            </div>
+          </div>
+          <div class="sectionImg">
+            <div class="arrow leftArrow">
+              <div class="arrowText">WOMEN</div>
+              <div class="reh m3"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+              <div class="reh m2"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+              <div class="reh m1"><img src="IMG/Icons/icon_navigation_rigth.png" alt="arrow"></div>
+            </div>
+            <div class="btnWrapper">
+              <div class="linkButton" id="pantsBtnWrapper">
+                <a id="Btn">брюки</a>
+              </div>
+            </div>
+            <div class="down">
+              <button class="downButton"></button>
+            </div>
+          </div>
+        </div> -->
         <div class="item section4" id = "section4">
           <div class="line">
             <div>
@@ -566,7 +712,6 @@
               <a href="#" class="iLink"><img src="IMG/Image/man/Group 6.jpg"alt="instagram"></a>
               <a href="#" class="right iLink"><img src="IMG/Image/man/Group 5.jpg"alt="instagram"></a>
             </div>
-
           </div>
           <div class="form">
             <div class="preText">БУДЬТЕ В КУРСЕ НАШИХ ПОСЛЕДНИХ НОВОСТЕЙ: ПОДПИШИТЕСЬ 
@@ -648,6 +793,12 @@
           <button></button>
         </li>
         <li class="dot" id="5">
+          <button></button>
+        </li>
+        <li class="dot justForPortrait" id="6">
+          <button></button>
+        </li>
+        <li class="dot justForPortrait" id="7">
           <button></button>
         </li>
       </ul>

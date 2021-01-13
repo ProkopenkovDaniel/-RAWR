@@ -139,13 +139,14 @@ footer{
     text-transform: uppercase;
     font-size:  1.29vh;
     font-weight: 400;
+    line-height: 1.48vh;
 }
 .footerWrapper ul{
     margin:0 0;
     padding: 0 0;
 }
 .footerLi{
-    padding: 1.39vh 0 1.39vh 0;
+    padding: 1.2vh 0 1.2vh 0;
 }
 
 .footerLi a{
@@ -154,11 +155,11 @@ footer{
 }
 
 ul > .footerLi:first-child{
-    padding: 0 0 1.39vh 0;
+    padding: 0 0 1.2vh 0;
 }
 
 ul > .footerLi:last-child{
-    padding: 1.39vh 0 2.78vh 0;
+    padding: 1.2vh 0 2.78vh 0;
 }
 
 .footerLeft, .footerRight{
@@ -192,13 +193,11 @@ ul > .footerLi:last-child{
     display: inline-block;
     height: 3.7vh;
     width: 2.08vw;
+    margin:3.9vh 3.152vw 7.63vh 0;
 }
 .footerTopCenter a img{
     max-width: 100%;
     max-height: 100%;
-}
-.footerTopCenter a{
-    margin:3.9vh 3.152vw 9.63vh 0;
 }
 .footerBottomCenter{
     width: 13.18vw;
@@ -215,4 +214,23 @@ footer ul{
 footer .lineThin{
     background-color: #fff;
     width: 100%;
+}
+@media (orientation:portrait){
+    .notForPortrait{
+      display: none;
+    }
+    .justForPortrait{
+        display:block;
+    }
+    .instagramInfo {
+        display: flex;
+        justify-content: center;
+        font-size: 1.67vh;
+    }
+    .lineThin{
+        width: 26.38vw;
+    }
+    .footerTopCenter a{
+        margin:3.9vh 3.152vw 7.63vh 0;
+    }
 }

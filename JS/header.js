@@ -31,15 +31,19 @@ $(window).on("load", function(){
             MakeHeaderWhite(); 
         })
     });
+    $("#humburger").hover(MakeAddedMenuPortraitVisible(), MakeAddedMenuPortraitUnvisible());
 });
 function MakeHeaderBlack(){
     $header = $("header");
     $header.css({'background':'#fff'})
     $header.find("#saved").attr('id', 'saved_b');
     $header.find("#search").attr('id', 'search_b');
+    $header.find("#searchLine").attr('id', 'searchLine_b');
     $header.find("#account").attr('id', 'account_b');
     $header.find("#basket").attr('id', 'basket_b');
+    $header.find("#humburger").attr('id', 'humburger_b');
     $header.find(".leftMenu a").css({'color':'#000'});
+    $header.find(".rightMenu a").css({'color':'#000'});
     $header.find(".leftMenu a").addClass("b");
     $header.find(".leftMenu a.red").css({'color':'#DA1E28'});
     $header.find(".logo").find("img").attr('src', 'IMG/Logo/Black.png');
@@ -52,9 +56,12 @@ function MakeHeaderWhite(){
     $header.css({'background':'none'})
     $header.find("#saved_b").attr('id', 'saved');
     $header.find("#search_b").attr('id', 'search');
+    $header.find("#searchLine_b").attr('id', 'searchLine');
     $header.find("#account_b").attr('id', 'account');
     $header.find("#basket_b").attr('id', 'basket');
+    $header.find("#humburger_b").attr('id', 'humburger');
     $header.find(".leftMenu a").css({'color':'#fff'});
+    $header.find(".rightMenu a").css({'color':'#fff'});
     $header.find(".leftMenu a").removeClass("b");
     $header.find(".leftMenu a.red").css({'color':'#DA1E28'});
     $header.find(".logo").find("img").attr('src', 'IMG/Logo/White.png');
@@ -65,4 +72,11 @@ function MakeAddedMenuVisible(id){
 }
 function MakeAddedMenuUnvisible(id){
     $("#"+id).addClass("hide");
+}
+
+function MakeAddedMenuPortraitVisible(){
+    $(".addedMeniPortrait").removeClass("hide");
+}
+function MakeAddedMenuPortraitUnvisible(){
+    $(".addedMeniPortrait").addClass("hide");
 }

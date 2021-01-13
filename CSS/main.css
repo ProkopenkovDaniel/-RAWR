@@ -12,7 +12,7 @@ body{
   font-family: 'Roboto', sans-serif;
   color: #fff;
 }
-.jusrForPortrait{
+.justForPortrait{
   display: none;
 }
 #Page{
@@ -432,32 +432,6 @@ body{
   .notForPortrait{
     display: none;
   }
-  .dots{
-    bottom: 45.37vh;
-  }
-  .btnWrapper{
-    top: 79.56vh;
-  }
-  #Btn{
-    padding: 0.93vh 5.26vw;
-  }
-  .down{
-    top: 89.62vh;
-  }
-  .downButton{
-    width: 5.27vw;
-    height: 2.09vh;
-  }
-  .leftArrow,
-  .rightArrow{
-    top: 48.83vh;
-  }
-  .leftArrow{
-    right:88.83vw;
-  }
-  .rightArrow{
-    border-left-color:88.83vw;
-  }
   .text{
     text-transform: uppercase;
     font-size: 2.09vh;
@@ -469,5 +443,62 @@ body{
     padding-top: 12.548vh;
     
   }
-
+  .section1 .sectionImg{
+    background: url("../IMG/Image/man/image_1.jpg") no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+  .w .section1 .sectionImg{
+    background: url("../IMG/Image/woman/image_1.jpg") no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+  .section2 .sectionImg{
+    background: url("../IMG/Image/man/image_2.jpg") no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+  .w .section2 .sectionImg{
+    background: url("../IMG/Image/woman/image_2.jpg") no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+  .section2i .sectionImg{
+    background: url("../IMG/Image/man/image_2.jpg") no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+  .w .section2i .sectionImg{
+    background: url("../IMG/Image/woman/image_2.jpg") no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+  .section3 .sectionImg{
+    background: url("../IMG/Image/man/image_3.jpg") no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+  .w .section3 .sectionImg{
+    background: url("../IMG/Image/woman/image_3.jpg") no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+  .section4 .sectionImg{
+    background: url("../IMG/Image/man/image_4.jpg") no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+  .w .section4 .sectionImg{
+    background: url("../IMG/Image/woman/image_4.jpg") no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+  .section5 .sectionImg{
+    background: #FF6E00;
+    z-index: 10;
+  }
+  .w .section5 .sectionImg{
+    background: #0066CC;
+    z-index: 10;
+  }
 } 

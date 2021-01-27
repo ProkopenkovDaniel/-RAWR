@@ -1,170 +1,393 @@
-/* .down{
-    display: flex;
-    width: 100vw;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 81.94vh;
-  }
-  .downButton{
-    background: url("../IMG/Icons/icon_navigation_down.png") no-repeat center;
-    background-size: contain;
-    width: 2.29vw;
-    height: 2.3vh;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .arrow{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    text-transform: uppercase;
-    cursor: pointer;
-  }
-  .rightArrow{
-    left: 88.54vw;
-    top: 37.037vh;
-  }
-  .leftArrow{
-    right: 88.54vw;
-    top: 37.037vh;
-  }
-  .leftArrow div img{
-    transform: rotate(180deg);
-  }
-  .leftArrow .arrowText{
-    margin-left:0px;
-    margin-right: 10px;
-  }
-  .arrowText{
-    margin-left:10px;
-    line-height: 2.61vh;
-    font-size: 2.2vh;
-    font-weight: 500;
-    display: block;
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-  .reh{
-    position:relative;
-    display: block;
-    height: 2.22vh;
-  }
-  .m1 {
-    animation: ani3 1.0s steps(5, start) infinite;
-    -webkit-animation: ani3 1.0s steps(5, start) infinite;
-  }
-  .m2 {
-    animation: ani2 1.0s steps(5, start) infinite;
-    -webkit-animation: ani2 1.0s steps(5, start) infinite;
-  }
-  .m3 {
-    animation: ani1 1.0s steps(5, start) infinite;
-    -webkit-animation: ani1 1.0s steps(5, start) infinite;
-  }
-  @keyframes ani1 {
-     0% {opacity:0.1;}
-    11% {opacity:0.1;}
-    22% {opacity:0.1;}
-    33% {opacity:0.15;}
-    44% {opacity:0.25;}
-    55% {opacity:0.5;}
-    66% {opacity:1;}
-    77% {opacity:0.5;}
-    88% {opacity:0.25;}
-    100% {opacity:0.15;}
-  }
-  @keyframes ani2 {
-     0% {opacity:0.1;}
-    11% {opacity:0.15;}
-    22% {opacity:0.25;}
-    33% {opacity:0.5;}
-    44% {opacity:1;}
-    55% {opacity:0.5;}
-    66% {opacity:0.25;}
-    77% {opacity:0.15;}
-    88% {opacity:0.1;}
-    100% {opacity:0.1;}
-  }
-  @keyframes ani3 {
-     0% {opacity:0.25;}
-    11% {opacity:0.5;}
-    22% {opacity:1;}
-    33% {opacity:0.5;}
-    44% {opacity:0.25;}
-    55% {opacity:0.15;}
-    66% {opacity:0.1;}
-    77% {opacity:0.1;}
-    88% {opacity:0.1;}
-    100% {opacity:0.15;}
-  }
+.justForPortrait{
+  display: none;
+}
+.down{
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 81.94vh;
+}
+.downButton{
+  background: url("../IMG/Icons/icon_navigation_down.png") no-repeat center;
+  background-size: contain;
+  width: 2.29vw;
+  height: 2.3vh;
+  border: none;
+  cursor: pointer;
+}
+
+.arrow{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.arrow img{
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+.rightArrow{
+  left: 88.54vw;
+  top: 37.037vh;
+}
+.leftArrow{
+  right: 88.54vw;
+  top: 37.037vh;
+}
+.leftArrow div img{
+  transform: rotate(180deg);
+}
+.leftArrow .arrowText{
+  margin-left:0px;
+  margin-right: 10px;
+}
+.arrowText{
+  margin-left:10px;
+  line-height: 2.61vh;
+  font-size: 2.2vh;
+  font-weight: 500;
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.reh{
+  position:relative;
+  display: block;
+  height: 2.22vh;
+}
+.m1 {
+  animation: ani3 1.0s steps(5, start) infinite;
+  -webkit-animation: ani3 1.0s steps(5, start) infinite;
+}
+.m2 {
+  animation: ani2 1.0s steps(5, start) infinite;
+  -webkit-animation: ani2 1.0s steps(5, start) infinite;
+}
+.m3 {
+  animation: ani1 1.0s steps(5, start) infinite;
+  -webkit-animation: ani1 1.0s steps(5, start) infinite;
+}
+@keyframes ani1 {
+   0% {opacity:0.1;}
+  11% {opacity:0.1;}
+  22% {opacity:0.1;}
+  33% {opacity:0.15;}
+  44% {opacity:0.25;}
+  55% {opacity:0.5;}
+  66% {opacity:1;}
+  77% {opacity:0.5;}
+  88% {opacity:0.25;}
+  100% {opacity:0.15;}
+}
+@keyframes ani2 {
+   0% {opacity:0.1;}
+  11% {opacity:0.15;}
+  22% {opacity:0.25;}
+  33% {opacity:0.5;}
+  44% {opacity:1;}
+  55% {opacity:0.5;}
+  66% {opacity:0.25;}
+  77% {opacity:0.15;}
+  88% {opacity:0.1;}
+  100% {opacity:0.1;}
+}
+@keyframes ani3 {
+   0% {opacity:0.25;}
+  11% {opacity:0.5;}
+  22% {opacity:1;}
+  33% {opacity:0.5;}
+  44% {opacity:0.25;}
+  55% {opacity:0.15;}
+  66% {opacity:0.1;}
+  77% {opacity:0.1;}
+  88% {opacity:0.1;}
+  100% {opacity:0.15;}
+}
 #Btn{
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 1.85vh;
-    text-transform: uppercase;
-    display: inline-block;
-    position: relative;
-    z-index: 0;
-    padding: 0.93vh 1.98vw;
-    border: 2px solid #fff;
-    transition: all 300ms ease;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1.85vh;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+  padding: 0.93vh 1.98vw;
+  border: 2px solid #fff;
+  transition: all 300ms ease;
 }
 .linkButton{
-    display: inline;
+  display: inline;
 }
 #Btn::before{
-    position: absolute;
-    content:'';
-    width: 0%;
-    height: 100%;
-    top:0;
-    left: auto;
-    right: 0;
-    z-index: 1;
-    transition: all 300ms ease;
+  position: absolute;
+  content:'';
+  width: 0%;
+  height: 100%;
+  top:0;
+  left: auto;
+  right: 0;
+  z-index: 1;
+  transition: all 300ms ease;
 }
 #Btn:hover::before {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
 }
 #Btn:hover{
-    color:#000;
+  color:#000;
 }
 .btnWrapper{
-    position: absolute;
-    width:100vw;
-    display: flex;
-    top: 70.83vh;
-    justify-content: center; 
-    transition: all 300ms ease;
+  position: absolute;
+  width:100vw;
+  display: flex;
+  top: 70.83vh;
+  justify-content: center; 
+  transition: all 300ms ease;
 }
 #manBtnWrapper{
 }
 #womanBtsnWrapper{
 }
 #hudiBtnWrapper{
-    left:38.073vw;
-    position: absolute;
+  left:38.073vw;
+  position: absolute;
 }
 #suitBtnWrapper{
-    right:34.895vw;
-    position: absolute;
+  right:34.895vw;
+  position: absolute;
 }
 #jacketBtnWrapper{
-    left:35.937vw;
-    position: absolute;
+  left:35.937vw;
+  position: absolute;
 }
 #pantsBtnWrapper{
-    right:36.302vw;
-    position: absolute;
+  right:36.302vw;
+  position: absolute;
+}
+.dots{
+  position: relative;
+  right: 8.854%;
+  left:90.36%;
+  bottom: 45.37vh; 
+  z-index: 10;
+  display: block;
+  padding: 0;
+  margin:0;
+}
+.dots li{
+  list-style: none;
+  margin-bottom:0.93vh;
+  width: 15px;
+  height: 15px;
+}
+li.dot{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+li.dot.justForPortrait{
+  display: none;
+}
+.dots li.active{
+  margin-bottom:0.93vh;
+}
+.dots li a{
+  background: URL("../IMG/Vectors/Dot.svg") no-repeat center;
+  background-size: contain; 
+  width:33.3%;
+  height: 33.3%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display:block;
+  align-self: center;
+  margin: auto;
+}
+.dots li.active a{
+  width:100%;
+  height: 100%;
+  background: URL("../IMG/Vectors/ActiveDot.svg") no-repeat center;
+  background-size: contain;
+}
+.dots li.b a{
+  background: URL("../IMG/Vectors/black/Dot.svg") no-repeat center;
+  background-size: contain;
+}
+.dots li.active.b a{
+  background: URL("../IMG/Vectors/black/ActiveDot.svg") no-repeat center;
+  background-size: contain;
+}
+/* .dots li button{
+  background: URL("../IMG/Vectors/Dot.svg") no-repeat center;
+  width:100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.dots li.active button{
+  background: URL("../IMG/Vectors/ActiveDot.svg") no-repeat center;
+  background-size: contain;
+}
+.dots li.b button{
+  background: URL("../IMG/Vectors/black/Dot.svg") no-repeat center;
+}
+.dots li.active.b button{
+  background: URL("../IMG/Vectors/black/ActiveDot.svg") no-repeat center;
+  background-size: contain;
 } */
+.triggerWrapper{
+  display: none;
+}
+@media (max-width: 800px)
+and (orientation:landscape){
+  .dots{
+    bottom: 52.37vh; 
+
+  }  
+}
+@media (orientation:portrait)
+  and (min-device-width: 375px){
+  .notForPortrait{
+    display: none;
+  }
+  .justForPortrait{
+    display: block;
+  }
+  .dots{
+    bottom: 45.37vh;
+    left:95.92vw;
+  }
+  .btnWrapper{
+    top: 79.56vh;
+  }
+  #Btn{
+    padding: 0.93vh 5.26vw;
+  }
+  #hudiBtnWrapper, 
+  #suitBtnWrapper,
+  #jacketBtnWrapper,
+  #pantsBtnWrapper{
+    left:inherit;
+    right:inherit;
+    position: relative;
+  }
+  .down{
+    top: 89.62vh;
+  }
+  .downButton{
+    width: 5.27vw;
+    height: 2.09vh;
+  }
+  .leftArrow,
+  .rightArrow{
+    top: 48.83vh;
+  }
+  .leftArrow{
+    right:76.97vw;
+  }
+  .rightArrow{
+    left:82.97vw;
+  }
+  /* .text{
+    text-transform: uppercase;
+    font-size: 2.09vh;
+    line-height: 2.9vh;
+    text-align: center;
+    width: 71.875vw;
+    display: block;
+    margin:auto;
+    padding-top: 12.548vh;
+  }*/
+  .dots{ 
+    bottom:40.87vh;
+  }
+  li.dot.justForPortrait{
+    display: flex;
+  }
+} 
+  @media only screen 
+  and (orientation:portrait)
+  and (max-device-width: 375px){  
+    .notForPortrait{
+      display: none;
+    }
+    .justForPortrait{
+      display: block;
+    }
+    .arrow,
+    .down{
+      display: none;
+    }
+    .btnWrapper{
+      top: 79.46vh;
+    }
+    #Btn{
+      font-size: 2.99vh;
+      padding: 1.65vh 11.2vw;
+    }
+    #hudiBtnWrapper, 
+    #suitBtnWrapper,
+    #jacketBtnWrapper,
+    #pantsBtnWrapper{
+      left:inherit;
+      right:inherit;
+      position: relative;
+    }
+    .dots{
+      bottom: 60.87vh;
+      left:93.87vw;
+    }
+    .dots li, .dots li.active{
+      margin-bottom:0;
+    }
+    .triggerWrapper{
+      position: absolute;
+      width:100vw;
+      display: flex;
+      bottom: 0;
+      justify-content: center; 
+      text-transform:uppercase;
+      font-size: 2.39vh;
+      font-weight: 300;
+      padding-bottom: 2.55vh;
+      z-index: 5;
+    }
+    a.trigger{
+      cursor: pointer;
+    }
+    a.trigger.left{
+      margin-right: 4.8vw;
+    }
+    a.trigger.bold{
+      font-weight: 700;
+    }
+    /* .dots li.b a{
+      background: URL("../IMG/Vectors/Dot.svg") no-repeat center;
+      /* background-size: contain; */
+    /*}*/
+    /*.dots li.active.b a{
+      background: URL("../IMG/Vectors/ActiveDot.svg") no-repeat center;
+      background-size: contain;
+    } */
+    .dots li a{
+      background: URL("../IMG/Vectors/Dot.svg") no-repeat center;
+      background-size: contain; 
+    }
+    li.dot.justForPortrait{
+      display: flex;
+    }
+  
+}

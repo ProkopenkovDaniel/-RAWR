@@ -2,22 +2,24 @@
 .photos{
     height: 21.296vh;
 }
-.photos .row{
+/* .photos .row{
     height: 100%;
-}
+} */
 .row.last{
     margin-top:1.85vh;
-    margin-bottom: 5.56vh;
+    margin-bottom: 1.56vh;
 }
 .row a.iLink{
     display: block;
     margin-right: 1.042vw;
     width: 14.58vw;
-    height: 21.29vh;
+    height: 23vh; 
 } 
 .row a img{
     max-width: 100%;
     max-height: 100%;
+    display: block;
+    margin: auto;
 }
 .row a.right{
     margin-right: 0;
@@ -28,7 +30,7 @@
     justify-content: center;
 }
 .head{
-    padding: 14.26vh 0 0.65vh 0;
+    padding: 17.96vh 0 0.65vh 0;
     width: 100vw;
     position:relative;
     background: #fff;
@@ -49,7 +51,7 @@
     margin-right: auto;
     align-self: left;
     height: 2px;
-    background-color: #000;
+    background-color: #1B1B1B;
     width: 33.854%;
 }
 .rightLine{
@@ -57,11 +59,11 @@
     margin-left: auto;
 }
 .instagramInfo img{
-    padding-left: 16px;
+    padding-left: 0.83vw;
     text-align: center;
     justify-content: center;
-    width: 24px;
-    height: 24px;
+    max-width: 1.25vw;
+    max-height: 2.22vh;
 }
 .instagramInfo {
     display: flex;
@@ -91,23 +93,22 @@
     font-weight: 400;
     display: block;
     width: 40.625vw;
-    /* height: 3.125vh; */
-    border: 2px solid #000;
+    height: 5.1vh;
+    border: 2px solid #1B1B1B;
     margin: 0 0;
-    padding: 1.99vh 5.21vw;
-    
+    padding: 0 5.21vw;  
 }
 .formButton{
     margin: 0 0;
     padding: 0 0;
     width: 21.05vw;
-    height: 5.92vh;
-    background-color: #000;
+    height: 5.56vh;
+    background-color: #1B1B1B;
     color: #fff;
     font-weight: 700;
     font-size: 1.67vh;
     text-transform: uppercase;
-    border: 1px solid #000;
+    border: 1px solid #1B1B1B;
 }
 .postText{
     font-size: 1.39vh;
@@ -121,46 +122,101 @@
 .checkBox{
     height: 30px;
 }
+.iconWrapper{
+    display: none;
+}
 footer{
     display: inline-block;
     width: 100vw;
-    height: 28.7vh;
-    background: #000;
+    height: 31vh;
+    background: #1B1B1B;
     bottom:0;
-
 }
 .footerWrapper{
     position: relative;
     display: flex;
     width: 100%;
-    margin: 1.85vh 0 0 0;
+    margin: 4.63vh 0 0 0;
     justify-content: center;
     align-content: center;
     text-transform: uppercase;
     font-size:  1.29vh;
     font-weight: 400;
+    line-height: 1.48vh;
+}
+.iconWrapper{
+    display: none;
+}
+.topCenterWrapper ul{
+    display: flex;
+    justify-content: center;
+}
+.topCenterWrapper li{
+    display:block;
+    margin-right: 3.8vw;
+}
+.topCenterWrapper li:last-child{
+    margin-right: 0;
+}
+.topCenterWrapper li a{
+    display: block;
+    font-size: 1.11vh;
+    text-align: center;
+    color:#fff;
+}
+.iconImg{
+    display: block;
+    width: 2.08vw;
+    height: 3.7vh;
+    margin-bottom: 0.5vh;
 }
 .footerWrapper ul{
     margin:0 0;
     padding: 0 0;
 }
-.footerLi{
-    padding: 1.39vh 0 1.39vh 0;
+#VKIcon{
+    background: url("../IMG/Icons/iconfinder_vk.svg") no-repeat;
+    background-position: center;
+    background-size: contain;
 }
-
+#PIIcon{
+    background: url("../IMG/Icons/iconfinder_pinterest.svg") no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+#INIcon{
+    background: url("../IMG/Icons/iconfinder_instagram.svg") no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+#VKIcon:hover{
+    background: url("../IMG/Icons/hovered/iconfinder_vk.svg") no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+#PIIcon:hover{
+    background: url("../IMG/Icons/hovered/iconfinder_pinterest.svg") no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+#INIcon:hover{
+    background: url("../IMG/Icons/hovered/iconfinder_instagram.svg") no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.footerLi{
+    padding: 1.2vh 0 1.2vh 0;
+}
 .footerLi a{
     text-decoration: none;
     color:white;
 }
-
 ul > .footerLi:first-child{
-    padding: 0 0 1.39vh 0;
+    padding: 0 0 1.2vh 0;
 }
-
 ul > .footerLi:last-child{
-    padding: 1.39vh 0 2.78vh 0;
+    padding: 1.2vh 0 2.78vh 0;
 }
-
 .footerLeft, .footerRight{
     width: 19.79vw;
 }
@@ -197,16 +253,37 @@ ul > .footerLi:last-child{
     max-width: 100%;
     max-height: 100%;
 }
-.footerTopCenter a{
-    margin:3.9vh 3.152vw 9.63vh 0;
-}
 .footerBottomCenter{
-    width: 13.18vw;
-    height: 6.1vh;
+    width: 9.32vw;
+    height: 4.26vh;
+    margin-top:6.76vh;
 }
 .footerBottomCenter img{
     max-width: 100%;
     max-height: 100%;
+    display: block;
+    margin: auto;
+}
+.footerUnderBottom ul{
+    display:flex;
+    margin-top: 3.7vh;
+    justify-content: center;
+    align-content: center;
+}
+.footerUnderBottom li{
+    margin-right: 0.68vw; /*13px*/
+    vertical-align: middle;
+    display: table-cell;
+}
+.footerUnderBottom li:last-child{
+    margin-right: 0; 
+}
+.footerUnderBottom li#c5 img{
+    margin-top: -1vh; 
+}
+.footerUnderBottom img{
+    display:block;
+    margin:auto;
 }
 
 footer ul{
@@ -215,4 +292,401 @@ footer ul{
 footer .lineThin{
     background-color: #fff;
     width: 100%;
+}
+@media (max-width: 800px)
+and (orientation:landscape){
+    .footerLi{
+        padding: 0.5vh 0 0.5vh 0;
+    }
+    .footerBottomCenter{
+        margin-top:5vh;
+    }
+    .footerUnderBottom img{
+        height: 2.5vh;
+    }
+    .footerUnderBottom li#c5 img{
+        margin-top: -0.3vh; 
+    }
+    .footerUnderBottom li#c6 img{
+        height: 1.7vh;
+        margin-top: 0.1vh;
+    }
+    .formInput{
+        font-size: 1.29vh;
+        font-weight: 400;
+        display: block;
+        width: 40.625vw;
+        height: 4.7vh;
+        border: 2px solid #1B1B1B;
+        margin: 0 0;
+        padding: 0 5.21vw;  
+    }
+}
+@media (orientation:portrait)
+    and (min-device-width: 375px){
+    .notForPortrait{
+      display: none;
+    }
+    .justForPortrait{
+        display:block;
+    }
+    .head{
+        padding: 12.31vh 0 1.6vh 0;
+        width: 100vw;
+        position:relative;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 400;
+        font-size: 2.2vh;
+        color: #000;
+    }
+    .instagramInfo {
+        display: flex;
+        justify-content: center;
+        font-size: 1.67vh;
+    }
+    .instagramLink{
+        font-size: 1.67vh;
+        padding-bottom: 0.92vh;
+    }
+    .lineThin{
+        width: 26.38vw;
+    }
+    .photos > .row{
+        display:block;
+    }
+    .photos > .row .row{
+        margin-bottom: 0.5vh;
+    }
+    .row a.iLink{
+        margin-right: 2.39vw;
+        width: 29.86vw;
+        height: 18.17vh;
+    }
+    .row a.iLink:last-child{
+        margin-right: 0;
+    }
+    .instagramInfo img{
+        padding-left: 0.83vw;
+        text-align: center;
+        justify-content: center;
+        max-width: none;
+        max-height: 2.22vh;
+    }
+    .photos {
+        height: 44.72vh;
+    }
+    .preText{
+        font-size: 0.75vh;
+        font-weight: 400;
+        padding-bottom: 0.9896%;
+        padding-top: 0;
+    }
+    .formInput{
+        font-size: 1.19vh;
+        font-weight: 400;
+        display: block;
+        width: 51.44vw;
+        height: 3.35vh;
+        border: 2px solid #1B1B1B;
+        margin: 0 0;
+        padding: 0 0 0 2.39vw;  
+    }
+    .formButton{
+        margin: 0 0;
+        padding: 0 0;
+        width: 34.17vw;
+        height: 3.68vh;
+        font-weight: 700;
+        font-size: 1.005vh;
+        text-transform: uppercase;
+        border: 1px solid #1B1B1B;
+    }
+    .postText{
+        font-size: 0.75vh;
+        font-weight: 400;
+        padding-left: 18px;
+    }
+    .row.last{
+        margin-top:1.67vh;
+        margin-bottom: 5.86vh;
+    }
+    footer{
+        display: inline-block;
+        width: 100vw;
+        height: 28.7vh;
+        background: #1B1B1B;
+        bottom:0;
+    }
+    .footerTopCenter a{
+        display: inline-block;
+        height: inherit;
+        width: inherit;
+    }
+    .iconWrapper{
+        display: none;
+    }
+    .topCenterWrapper ul{
+        display: flex;
+        justify-content: center;
+    }
+    .topCenterWrapper li{
+        display:block;
+        margin-right: 3.59vw;
+    }
+    .topCenterWrapper li:last-child{
+        margin-right: 0;
+    }
+    .topCenterWrapper li a{
+        display: block;
+        text-align: center;
+        color:#fff;
+        font-size: 0.67vh;
+        line-height: 0.786vh;
+    }
+    .iconImg{
+        display: block;
+        width: 3.11vw;
+        height: 2.17vh;
+        margin-bottom: 0.3vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .lineThin{
+        height: 1px;
+        background-color: #1B1B1B;
+    }
+    footer .lineThin{
+        background-color: #fff;
+        width: 22.54vw;
+    } 
+    .footerWrapper{
+        margin: 1.85vh 0 0 0;
+        justify-content: center;
+        align-content: center;
+        text-transform: uppercase;
+        font-size:  0.84vh;
+        line-height: 1.27vh;
+    }
+    
+    ul > .footerLi:first-child{
+        padding: 0 0 0.4vh 0;
+        font-size:  1.08vh;
+    }
+    .footerLi{
+        padding: 0.7vh 0 0.7vh 0;
+    }
+    .footerLeft, .footerRight{
+        width: 22.54vw;
+    }
+    .footerLeft{
+        padding-right: 7.19vw;
+    }
+    .footerRight{
+        padding-left: 7.19vw;
+    }
+    .footerBottomCenter{
+        width: 19.78vw;
+        height: 3.51vh;
+        margin-top: 4vh;
+    }
+    .footerUnderBottom li#c5 img{
+        margin-top: -0.5vh; 
+    }
+}
+@media only screen 
+    and (orientation:portrait)
+    and (max-device-width: 375px){
+    .notForPhone{
+        display: none;
+    }
+    footer{
+        height:41.82vh;
+    }  
+    .sectionFooter{
+        background: url("../IMG/Image/footer.jpg") no-repeat;
+        background-position: top;
+        background-size: cover;
+        height: 58.17vh;
+        top:0;
+    }
+
+    .photos{
+        display:none;
+    }
+    .head{
+        display:none;
+    }
+    .head + a{
+        display: none;
+    }
+    .preText{
+        color: #fff;
+        font-size: 2.099vh;
+        font-weight: 400;
+        padding-bottom: 0;
+        padding-top: 13.19vh;
+    }
+    .formInput{
+        font-size: 1.19vh;
+        font-weight: 400;
+        display: block;
+        width: 51.44vw;
+        height: 3.35vh;
+        border: 2px solid #1B1B1B;
+        margin: 0 0;
+        padding: 0 0 0 2.39vw;  
+    }
+    .formButton{
+        margin: 0 0;
+        padding: 0 0;
+        width: 34.17vw;
+        height: 3.68vh;
+        font-weight: 700;
+        font-size: 1.005vh;
+        text-transform: uppercase;
+        border: 1px solid #1B1B1B;
+    }
+    .postText{
+        font-size: 1.199vh;
+        font-weight: 400;
+        padding-left: 4.5vw;
+        line-height: 1.4vh;
+        display: block;
+        width: 51.73vw;
+        color:#fff;
+    }
+    .postText a{
+        color:#fff
+    }
+    .formInput{
+        font-size: 2.09vh;
+        font-weight: 500;
+        display: block;
+        width: 84.53vw;
+        height: 5.99vh;
+        border: none;
+        text-align: center;
+        background-color: #fff;
+        color:#000;
+        opacity: 0.5;
+        padding:0;
+        margin-left:auto;
+        margin-right: auto;
+        margin-bottom: 1.499vh;
+        margin-top: 4.497vh;
+    }
+    .formButton{
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 0;
+        width: 84.53vw;
+        height: 5.99vh;
+        display: block;
+        font-weight: 700;
+        font-size: 2.098vh;
+        text-transform: uppercase;
+        border: none;
+        color:#000;
+        background: #fff;
+    }
+    .form .row{
+        display:block;
+        align-items: center;
+        justify-content: center;
+    }
+    .form .row.last{
+        display:flex;
+        margin-top:1.67vh;
+        margin-bottom: 0;
+    }
+    .footerCenter{
+        display: none;
+    }
+    .checkBox{
+        border:1px solid #fff;
+        background: none;
+    }
+    .iconWrapper, .iconWrapper ul{
+        display: flex;
+    }
+    .iconWrapper ul{
+        margin: 4.19vh 0 0 0;
+    }
+    .iconWrapper li{
+        display:block;
+        margin-right: 13.33vw;
+    }
+    .iconWrapper li:last-child{
+        margin-right: 0;
+    }
+    .iconWrapper li a{
+        display: block;
+        font-size: 1.49vh;
+        text-align: center;
+        color:#fff;
+    }
+    .iconImg{
+        display: block;
+        width: 9.33vw;
+        height: 5.247vh;
+    }
+    #VKIcon{
+        background: url("../IMG/Icons/iconfinder_vk.svg") no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    #PIIcon{
+        background: url("../IMG/Icons/iconfinder_pinterest.svg") no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    #INIcon{
+        background: url("../IMG/Icons/iconfinder_instagram.svg") no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    #VKIcon:hover{
+        background: url("../IMG/Icons/hovered/iconfinder_vk.svg") no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    #PIIcon:hover{
+        background: url("../IMG/Icons/hovered/iconfinder_pinterest.svg") no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    #INIcon:hover{
+        background: url("../IMG/Icons/hovered/iconfinder_instagram.svg") no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    .footerWrapper{
+        margin: 3.45vh 0 0 0;
+        justify-content: center;
+        align-content: center;
+        text-transform: uppercase;
+        font-size:  12px;
+        line-height: 2.11vh;
+    }
+    ul > .footerLi:first-child{
+        padding: 0 0 0.4vh 0;
+        font-size:  1.95vh;
+    }
+    .footerLeft, .footerRight{
+        width: 37.35vw;
+    }
+    .footerLeft{
+        padding-right: 7.19vw;
+    }
+    .footerRight{
+        padding-left: 7.19vw;
+    }
+    footer .lineThin{
+        background-color: #fff;
+        width: 37.35vw;
+    } 
+
 }

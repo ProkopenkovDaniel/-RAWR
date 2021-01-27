@@ -15,11 +15,13 @@ $(window).on("load", function(){
             (id == "menItem")? MakeAddedMenuVisible("men"):MakeAddedMenuVisible("women");
             MakeHeaderBlack();
             SetBackgroundColor("#fff");
+            
         }, function(){
             if (!$(this).is(":focus")){
                 var id = $(this).attr('id');
                 (id == "menItem")? MakeAddedMenuUnvisible("men"):MakeAddedMenuUnvisible("women");
                 if (!IsSlideBlack(GetActiveSlider())) MakeHeaderWhite();
+                else MakeHeaderBlack();
                 SetBackgroundColor("none");
                 isAddedMenuOpen = false;
             }
@@ -36,23 +38,32 @@ $(window).on("load", function(){
             var id = $(this).attr('id');
             (id == "menItem")? MakeAddedMenuUnvisible("men"):MakeAddedMenuUnvisible("women");
             if (!IsSlideBlack(GetActiveSlider())) MakeHeaderWhite(); 
+            else MakeHeaderBlack();
             SetBackgroundColor("none");
             isAddedMenuOpen = false;
         })
     }); 
+    $(".addedMenu").each(function(){
+        $(this).hover(function(){
+            $(this).siblings("a.menuItem").focus();
+            // MakeHeaderBlack();
+            // SetBackgroundColor("#fff", "flex");
+        },function(){
+            $(this).siblings("a.menuItem").blur();; 
+        })
+    })
 });
-$("#humburger").hover(MakeAddedMenuPortraitVisible(), MakeAddedMenuPortraitUnvisible());
 function MakeHeaderBlack(){
     $header = $("header");
     $header.find("#saved").attr('id', 'saved_b');
     $header.find("#search").attr('id', 'search_b');
-    $header.find("#searchLine").attr('id', 'searchLine_b');
+    $header.find("#searchLineMain").attr('id', 'searchLineMain_b');
     $header.find("#account").attr('id', 'account_b');
     $header.find("#basket").attr('id', 'basket_b');
     $header.find("#humburger").attr('id', 'humburger_b');
-    $header.find(".leftMenu a").css({'color':'#000'});
-    $header.find(".rightMenu a").css({'color':'#000'});
-    $header.find(".leftMenu a").addClass("b");
+    $header.find(".leftMenu a.underlining").css({'color':'#1B1B1B'});
+    $header.find(".rightMenu a.menuItemLink > span").css({'color':'#fff'});
+    $header.find(".leftMenu a.underlining").addClass("b");
     $header.find(".leftMenu a.red").css({'color':'#DA1E28'});
     $header.find(".logo").find("img").attr('src', 'IMG/Logo/Black.png');
     $header.find(".menuItem .img").addClass("b");
@@ -60,28 +71,29 @@ function MakeHeaderBlack(){
 }
 function SetBackgroundColor(color){
     $header = $("header");
-    $header.css({'background':color})
+    $header.css({'background':color});
+
 }
 function MakeHeaderWhite(){
     $header = $("header");
     $header.find("#saved_b").attr('id', 'saved');
     $header.find("#search_b").attr('id', 'search');
-    $header.find("#searchLine_b").attr('id', 'searchLine');
+    $header.find("#searchLineMain_b").attr('id', 'searchLineMain');
     $header.find("#account_b").attr('id', 'account');
     $header.find("#basket_b").attr('id', 'basket');
     $header.find("#humburger_b").attr('id', 'humburger');
-    $header.find(".leftMenu a").css({'color':'#fff'});
-    $header.find(".rightMenu a").css({'color':'#fff'});
-    $header.find(".leftMenu a").removeClass("b");
+    $header.find(".leftMenu a.underlining").css({'color':'#fff'});
+    $header.find(".rightMenu a.menuItemLink > span").css({'color':'#777575'});
+    $header.find(".leftMenu a.underlining").removeClass("b");
     $header.find(".leftMenu a.red").css({'color':'#DA1E28'});
     $header.find(".logo").find("img").attr('src', 'IMG/Logo/White.png');
     $header.find(".menuItem .img").removeClass("b");
 }
 function MakeAddedMenuVisible(id){
-    $("#"+id).removeClass("hide");
+    $("#"+id).css({'display' : 'block'});
 }
 function MakeAddedMenuUnvisible(id){
-    $("#"+id).addClass("hide");
+    $("#"+id).css({'display' : 'none'});
 }
 
 function MakeAddedMenuPortraitVisible(){

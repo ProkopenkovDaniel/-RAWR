@@ -9,14 +9,15 @@ function InitSliderDots($slider){
     var $ul = $slider.siblings(".dots");
     var $dots = $ul.children(".dot");
     $dots.each(function(){
-        $(this).children("button")
+        $(this).children("a")
         .on("click", function (){
+            if (slickIsChanging == false){
             var id = parseInt($(this).parent().attr('id'));
             var currentIndex = ($slider.slick("slickCurrentSlide"));
             $slider.siblings().children("#"+currentIndex).removeClass("active");
             $slider.slick("slickGoTo", id, false);
             $(this).parent().addClass("active");
-            ChangeActiveDot($slider, currentIndex, id);
+            ChangeActiveDot($slider, currentIndex, id);}
         });
     });
 }

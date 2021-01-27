@@ -1,7 +1,7 @@
-$(window).on("load", function(){
+$(window).on("resize", ChangeSlider)
+  .on("load", function(){
   $pageSlider = $("#Page").on("beforeChange", function(event, slick, currentSlide, nextSlide){
     slickIsChanging = true;
-    
     if (!IsSlideBlack(GetActiveSlider())){
       if (!isAddedMenuOpen) MakeHeaderWhite();
     }
@@ -11,7 +11,12 @@ $(window).on("load", function(){
       MakeHeaderBlack();
       } else{
         if (!isAddedMenuOpen) MakeHeaderWhite();
-    }
+      }
+      if ($("#Page").slick("slickCurrentSlide") == 1){
+        SetTriggerStatus($('a.trigger.right'));
+      } else{
+        SetTriggerStatus($('a.trigger.left'));
+      }
     slickIsChanging = false;
   })
   .slick({
@@ -33,12 +38,13 @@ $(window).on("load", function(){
     var $sliders = $(".slider");
     $(".slider").each(function(){
       var $fullSlide = $(this);
-      AddSlider($fullSlide);
+      AddSlider($fullSlide, ".itemI");
     });
+    ChangeSlider();
 });
 
-function AddSlider($fullSlide){
-  var $sections = $fullSlide.children(".item");
+function AddSlider($fullSlide, slide){
+  var $sections = $fullSlide.children(".itemI");
   var $sectionImgs = $fullSlide.find(".sectionImg");
   var slickIsChanging = false;
   var slideIndex = 0;
@@ -84,26 +90,36 @@ function AddSlider($fullSlide){
       });
     });
   }
-
-  function rightButtonEvent($Page){
-    $sections.each(function(){
-      var $sectionImg = $(this).children(".sectionImg"); 
-      $sectionImg.children(".rightArrow").on("click", function(){
-        $Page.slick("slickNext");
-      });
-    });
+    function rightButtonEvent($Page){
+    $(".rightArrow").each(function(){
+      $(this).on("click", function(){
+             $Page.slick("slickNext");
+       });
+    })
   }
   function leftButtonEvent($Page){
     $sections.each(function(){
-      var $sectionImg = $(this).children(".sectionImg"); 
-      $sectionImg.children(".leftArrow").on("click", function(){
+     $(".leftArrow").each(function(){
+       $(this).on("click", function(){
         $Page.slick("slickPrev");
       });
+    });
+    });
+  }
+  function TriggersClidkEvent($Page){
+    $("a.trigger.left").on('click', function(){
+      $Page.slick("slickPrev");
+      SetTriggerStatus($(this));
+    });
+    $("a.trigger.right").on('click', function(){
+      $Page.slick("slickNext");
+      SetTriggerStatus($(this));
     });
   }
   $("#Page").on("init", function(){
     rightButtonEvent($pageSlider);
     leftButtonEvent($pageSlider);
+    TriggersClidkEvent($pageSlider);
   });
 
   $fullSlide
@@ -146,8 +162,8 @@ function AddSlider($fullSlide){
       placeholders:false,
       rows:0,
       easing: 'easeOutQuad',
-      speed: 1000
-      // mobileFirst: true
+      speed: 1000,
+      slide: slide
     });
 }
 
@@ -156,4 +172,40 @@ function GetActiveSlider(){
   $activePageSlide = $activePageTrack.children(".slick-active");
   $activeSlider = $activePageSlide.find(".slider");
   return $activeSlider;
+}
+function ChangeSlider(){
+  $(".itemI").each(function(){
+    $(this).width=$(window).width();
+  });
+  var slideClass;
+  var wwidth = $(window).width();
+  var wheight = $(window).height();
+  if ($(window).width() < $(window).height()){
+    slideClass = "itemI";
+  } else{
+    slideClass = "item";
+  }
+  $(".slider").each(function(){
+    var $fullSlide = $(this);
+    var filter = ['.'+slideClass];
+    $fullSlide.slick("slickUnfilter")
+    $fullSlide.slick("slickFilter", '.'+slideClass);
+    $fullSlide.slick("refresh");
+    // $fullSlide.slick('unslick');
+    // $(".section").each(function(){
+    //     $(this).removeClass("item");
+    //     $(this).removeClass("itemI");
+    //     $(this).addClass(function(index, currentClass){
+    //       $(this).removeClass(currentClass);
+    //       return slideClass +" "+ currentClass;
+    //     });
+    // });
+    // AddSlider($fullSlide, "."+slideClass);
+  });
+}
+function SetTriggerStatus($trigger){
+  $trigger.parent(".triggerWrapper").children(".trigger").each(function(){
+    $(this).removeClass("bold");
+  });
+  $trigger.addClass("bold");
 }

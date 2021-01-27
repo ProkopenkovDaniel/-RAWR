@@ -35,10 +35,13 @@ body{
   font-size: 1.48vh;
   font-weight: 500;
   z-index: 10;
+  color:#fff;
+  text-transform: none;
+  width:100vw;
 }
 .line div{
-  padding: 0 0.736%;
-  width: 100%;
+  padding: 0 0.736vw;
+  width: 100vw;
   display: inherit;
   align-items: center;
   justify-content: center;
@@ -57,7 +60,7 @@ body{
 .sectionImg{
   position: relative;
   width: 100vw;
-  height: 96.3vh;
+  height: 100vh;
 }
 .section1 .sectionImg{
   background: url("../IMG/Image/man/image_1.jpg") no-repeat;
@@ -100,31 +103,30 @@ body{
   background-size: cover;
 }
 .section5 .sectionImg{
-  background: #FF6E00;
+  background: url("../IMG/Image/man/image_5.jpg") no-repeat;
+  background-position: top;
+  background-size: cover;
   z-index: 10;
 }
 .w .section5 .sectionImg{
-  background: #0066CC;
+  background: url("../IMG/Image/woman/image_5.jpg") no-repeat;
+  background-position: top;
+  background-size: cover;
   z-index: 10;
 }
-
 .section6 a{
   text-decoration: none;
   color: #000;
 }
-
-
-
-
 .text{
   text-transform: uppercase;
-  font-size: 2.8vh;
+  font-size: 2.22vh;
   line-height: 4vh;
   text-align: center;
   width: 71.875vw;
   display: block;
   margin:auto;
-  padding-top: 17.59vh;
+  padding-top: 39.54vh;
   
 }
 .text p,
@@ -142,8 +144,6 @@ body{
   align-items: center;
   justify-content: center;
 }
-
-
 /* Слайдер */ 
  .slick-slider{
  } 
@@ -160,7 +160,6 @@ body{
   display: flex;
   min-width: 0;
 }
-
 #full-slide .slick-track{
   display: block;
   min-width: 0;
@@ -428,7 +427,8 @@ body{
   }
 }
 
-@media (orientation:portrait)/* and (device-aspect-ratio: 3/2)*/{
+@media (orientation:portrait)
+  and (min-device-width: 376px){
   .notForPortrait{
     display: none;
   }
@@ -440,65 +440,181 @@ body{
     width: 71.875vw;
     display: block;
     margin:auto;
-    padding-top: 12.548vh;
-    
+    padding-top: 34.97vh; 
+    font-weight: 500; 
   }
   .section1 .sectionImg{
-    background: url("../IMG/Image/man/image_1.jpg") no-repeat;
+    background: url("../IMG/Image/man/tablet/image_1.jpg") no-repeat;
     background-position: top;
     background-size: cover;
   }
   .w .section1 .sectionImg{
-    background: url("../IMG/Image/woman/image_1.jpg") no-repeat;
+    background: url("../IMG/Image/woman/tablet/image_1.png") no-repeat;
     background-position: top;
     background-size: cover;
   }
   .section2 .sectionImg{
-    background: url("../IMG/Image/man/image_2.jpg") no-repeat;
+    background: url("../IMG/Image/man/tablet/image_2.jpg") no-repeat;
     background-position: top;
     background-size: cover;
   }
   .w .section2 .sectionImg{
-    background: url("../IMG/Image/woman/image_2.jpg") no-repeat;
+    background: url("../IMG/Image/woman/tablet/image_2.png") no-repeat;
     background-position: top;
     background-size: cover;
   }
   .section2i .sectionImg{
-    background: url("../IMG/Image/man/image_2.jpg") no-repeat;
+    background: url("../IMG/Image/man/tablet/image_3.jpg") no-repeat;
     background-position: top;
     background-size: cover;
   }
   .w .section2i .sectionImg{
-    background: url("../IMG/Image/woman/image_2.jpg") no-repeat;
+    background: url("../IMG/Image/woman/tablet/image_3.png") no-repeat;
     background-position: top;
     background-size: cover;
   }
   .section3 .sectionImg{
-    background: url("../IMG/Image/man/image_3.jpg") no-repeat;
+    background: url("../IMG/Image/man/tablet/image_4.jpg") no-repeat;
     background-position: top;
     background-size: cover;
   }
   .w .section3 .sectionImg{
-    background: url("../IMG/Image/woman/image_3.jpg") no-repeat;
+    background: url("../IMG/Image/woman/tablet/image_4.png") no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+  .section3i .sectionImg{
+    background: url("../IMG/Image/man/tablet/image_5.jpg") no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+  .w .section3i .sectionImg{
+    background: url("../IMG/Image/woman/tablet/image_5.jpg") no-repeat;
     background-position: top;
     background-size: cover;
   }
   .section4 .sectionImg{
-    background: url("../IMG/Image/man/image_4.jpg") no-repeat;
+    background: url("../IMG/Image/man/tablet/image_6.jpg") no-repeat;
     background-position: top;
     background-size: cover;
   }
   .w .section4 .sectionImg{
-    background: url("../IMG/Image/woman/image_4.jpg") no-repeat;
+    background: url("../IMG/Image/woman/tablet/image_6.jpg") no-repeat;
     background-position: top;
     background-size: cover;
   }
   .section5 .sectionImg{
-    background: #FF6E00;
+    background: url("../IMG/Image/man/tablet/image_7.jpg") no-repeat;
+    background-position: top;
+    background-size: cover;
     z-index: 10;
   }
   .w .section5 .sectionImg{
-    background: #0066CC;
+    background: url("../IMG/Image/woman/tablet/image_7.jpg") no-repeat;
+    background-position: top;
+    background-size: cover;
     z-index: 10;
   }
 } 
+@media only screen 
+  and (orientation:portrait)
+  and (max-device-width: 375px){  
+    .line{
+      display: none;
+    }
+    .sectionImg{
+      height: 100vh;
+    }
+    .section1 .sectionImg{
+      background: url("../IMG/Image/man/phone/image_1.jpg") no-repeat;
+      background-position: top;
+      background-size: cover;
+    }
+    .w .section1 .sectionImg{
+      background: url("../IMG/Image/woman/phone/image_1.jpg") no-repeat;
+      background-position: top;
+      background-size: cover;
+    }
+    .section2 .sectionImg{
+      background: url("../IMG/Image/man/phone/image_2.jpg") no-repeat;
+      background-position: top;
+      background-size: cover;
+    }
+    .w .section2 .sectionImg{
+      background: url("../IMG/Image/woman/phone/image_2.jpg") no-repeat;
+      background-position: top;
+      background-size: cover;
+    }
+    .section2i .sectionImg{
+      background: url("../IMG/Image/man/phone/image_3.jpg") no-repeat;
+      background-position: top;
+      background-size: cover;
+    }
+    .w .section2i .sectionImg{
+      background: url("../IMG/Image/woman/phone/image_3.jpg") no-repeat;
+      background-position: top;
+      background-size: cover;
+    }
+    .section3 .sectionImg{
+      background: url("../IMG/Image/man/phone/image_4.jpg") no-repeat;
+      background-position: top;
+      background-size: cover;
+    }
+    .w .section3 .sectionImg{
+      background: url("../IMG/Image/woman/phone/image_4.png") no-repeat;
+      background-position: top;
+      background-size: cover;
+    }
+    .section3i .sectionImg{
+      background: url("../IMG/Image/man/phone/image_5.jpg") no-repeat;
+      background-position: top;
+      background-size: cover;
+    }
+    .w .section3i .sectionImg{
+      background: url("../IMG/Image/woman/phone/image_5.jpg") no-repeat;
+      background-position: top;
+      background-size: cover;
+    }
+    .section4 .sectionImg{
+      background: url("../IMG/Image/man/phone/image_6.jpg") no-repeat;
+      background-position: top;
+      background-size: cover;
+    }
+    .w .section4 .sectionImg{
+      background: url("../IMG/Image/woman/phone/image_6.jpg") no-repeat;
+      background-position: top;
+      background-size: cover;
+    }
+    .section5 .sectionImg{
+      background: url("../IMG/Image/man/phone/image_7.jpg") no-repeat;
+      background-position: top;
+      background-size: cover;
+      z-index: 10;
+    }
+    .w .section5 .sectionImg{
+      background: url("../IMG/Image/woman/phone/image_7.jpg") no-repeat;
+      background-position: top;
+      background-size: cover;
+      z-index: 10;
+    }
+    .notForPhone{
+      display: none;
+    }
+    .text{
+      text-transform: uppercase;
+      font-size: 2.39vh;
+      line-height: 2.9vh;
+      text-align: center;
+      width: 71.875vw;
+      display: block;
+      margin:auto;
+      padding-top: 29.98vh;  
+      font-weight: 500;
+    }
+    .text p,
+    .text h4{
+      padding: 0;
+      margin: 0;
+      padding-bottom: 14px;
+    }
+}

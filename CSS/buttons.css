@@ -1,3 +1,6 @@
+.justForPortrait{
+  display: none;
+}
 .down{
   display: flex;
   width: 100vw;
@@ -23,7 +26,6 @@
   text-transform: uppercase;
   cursor: pointer;
 }
-
 .arrow img{
   height: 100%;
   width: 100%;
@@ -184,14 +186,50 @@
   padding: 0;
   margin:0;
 }
-
 .dots li{
   list-style: none;
   margin-bottom:0.93vh;
-  width:0.78vw;
-  height: 1.39vh;
+  width: 15px;
+  height: 15px;
 }
-.dots li button{
+li.dot{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+li.dot.justForPortrait{
+  display: none;
+}
+.dots li.active{
+  margin-bottom:0.93vh;
+}
+.dots li a{
+  background: URL("../IMG/Vectors/Dot.svg") no-repeat center;
+  background-size: contain; 
+  width:33.3%;
+  height: 33.3%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display:block;
+  align-self: center;
+  margin: auto;
+}
+.dots li.active a{
+  width:100%;
+  height: 100%;
+  background: URL("../IMG/Vectors/ActiveDot.svg") no-repeat center;
+  background-size: contain;
+}
+.dots li.b a{
+  background: URL("../IMG/Vectors/black/Dot.svg") no-repeat center;
+  background-size: contain;
+}
+.dots li.active.b a{
+  background: URL("../IMG/Vectors/black/ActiveDot.svg") no-repeat center;
+  background-size: contain;
+}
+/* .dots li button{
   background: URL("../IMG/Vectors/Dot.svg") no-repeat center;
   width:100%;
   height: 100%;
@@ -209,9 +247,19 @@
 .dots li.active.b button{
   background: URL("../IMG/Vectors/black/ActiveDot.svg") no-repeat center;
   background-size: contain;
+} */
+.triggerWrapper{
+  display: none;
 }
+@media (max-width: 800px)
+and (orientation:landscape){
+  .dots{
+    bottom: 52.37vh; 
 
-@media (orientation:portrait)/* and (device-aspect-ratio: 3/2)*/{
+  }  
+}
+@media (orientation:portrait)
+  and (min-device-width: 375px){
   .notForPortrait{
     display: none;
   }
@@ -220,6 +268,7 @@
   }
   .dots{
     bottom: 45.37vh;
+    left:95.92vw;
   }
   .btnWrapper{
     top: 79.56vh;
@@ -252,7 +301,7 @@
   .rightArrow{
     left:82.97vw;
   }
-  .text{
+  /* .text{
     text-transform: uppercase;
     font-size: 2.09vh;
     line-height: 2.9vh;
@@ -261,9 +310,84 @@
     display: block;
     margin:auto;
     padding-top: 12.548vh;
-    
-  }
-  .dots{
+  }*/
+  .dots{ 
     bottom:40.87vh;
   }
-  } 
+  li.dot.justForPortrait{
+    display: flex;
+  }
+} 
+  @media only screen 
+  and (orientation:portrait)
+  and (max-device-width: 375px){  
+    .notForPortrait{
+      display: none;
+    }
+    .justForPortrait{
+      display: block;
+    }
+    .arrow,
+    .down{
+      display: none;
+    }
+    .btnWrapper{
+      top: 79.46vh;
+    }
+    #Btn{
+      font-size: 2.99vh;
+      padding: 1.65vh 11.2vw;
+    }
+    #hudiBtnWrapper, 
+    #suitBtnWrapper,
+    #jacketBtnWrapper,
+    #pantsBtnWrapper{
+      left:inherit;
+      right:inherit;
+      position: relative;
+    }
+    .dots{
+      bottom: 60.87vh;
+      left:93.87vw;
+    }
+    .dots li, .dots li.active{
+      margin-bottom:0;
+    }
+    .triggerWrapper{
+      position: absolute;
+      width:100vw;
+      display: flex;
+      bottom: 0;
+      justify-content: center; 
+      text-transform:uppercase;
+      font-size: 2.39vh;
+      font-weight: 300;
+      padding-bottom: 2.55vh;
+      z-index: 5;
+    }
+    a.trigger{
+      cursor: pointer;
+    }
+    a.trigger.left{
+      margin-right: 4.8vw;
+    }
+    a.trigger.bold{
+      font-weight: 700;
+    }
+    /* .dots li.b a{
+      background: URL("../IMG/Vectors/Dot.svg") no-repeat center;
+      /* background-size: contain; */
+    /*}*/
+    /*.dots li.active.b a{
+      background: URL("../IMG/Vectors/ActiveDot.svg") no-repeat center;
+      background-size: contain;
+    } */
+    .dots li a{
+      background: URL("../IMG/Vectors/Dot.svg") no-repeat center;
+      background-size: contain; 
+    }
+    li.dot.justForPortrait{
+      display: flex;
+    }
+  
+}
